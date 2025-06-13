@@ -34,15 +34,16 @@ CONSTRAINTS:
 - Resources: [any resource limitations]
 
 AI AGENT INSTRUCTIONS:
-1. START: Read workspace KNOWLEDGE.md for relevant patterns and lessons
-2. ANALYZE: Start monitoring tools to understand current system behavior
-3. PLAN: Create detailed implementation approach with measurable milestones
-4. IMPLEMENT: Build incrementally with real-time validation at each step
-5. VALIDATE: Test with realistic data and user scenarios
-6. DOCUMENT: Update KNOWLEDGE.md with discoveries and reusable patterns
-7. COORDINATE: Update META-AI-README.md if this affects other workspaces
+1. **TOOL-FIRST INVESTIGATION**: Immediately start relevant monitoring tools to capture system state
+2. **BUILD INVESTIGATION TOOLING**: Create custom tools if existing ones don't provide needed insights
+3. **ANALYZE WITH DATA**: Use tool outputs to understand root causes, not just symptoms
+4. **IMPLEMENT WITH MONITORING**: Make changes while tools provide real-time feedback
+5. **VALIDATE WITH TOOLS**: Use comprehensive tool suite to verify solutions work
+6. **ENHANCE TOOLING**: Improve existing tools and create new ones based on learnings
+7. **DOCUMENT TOOL EVOLUTION**: Update KNOWLEDGE.md with both solutions AND tool improvements
+8. **SHARE TOOLING INSIGHTS**: Update AI-CONTEXT.md catalog with new tools and usage patterns
 
-Begin by exploring your workspace tools and understanding the current system state.
+Begin by deploying your monitoring arsenal and building any missing observability tools.
 ```
 
 ## Example Usage

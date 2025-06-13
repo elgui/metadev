@@ -1,8 +1,10 @@
-# Frontend AI Context (ai-agents/frontend/)
+# Frontend AI Context & Tool Catalog (ai-agents/frontend/)
 
-**Purpose**: This file gives AI assistants context about your frontend/client-side code. Save this as `ai-agents/frontend/AI-CONTEXT.md` in your project.
+**Purpose**: This file serves as both context about your frontend and a catalog of AI-built tools. Save this as `ai-agents/frontend/AI-CONTEXT.md` in your project.
 
-**Important**: This is SEPARATE from your actual code. Your normal `src/`, `components/`, etc. folders stay exactly where they are. This exists solely to help AI assistants understand your frontend setup.
+**Your Role as AI Agent**: You're not just here to write code - you're here to build, maintain, and continuously improve tools that give you real-time insight into the frontend system. Every tool you create should solve a specific observability or automation need.
+
+**Important**: This is SEPARATE from your actual code. Your normal `src/`, `components/`, etc. folders stay exactly where they are. This exists solely for AI agent collaboration and tooling.
 
 ## Your Project Setup
 
@@ -101,54 +103,186 @@ WHAT SUCCESS LOOKS LIKE:
 - No change to desktop functionality
 ```
 
-## AI Context Files in This Area
+## AI Tool Catalog & Capabilities
 
-### docs/KNOWLEDGE.md
-Where we document:
-- Solutions to problems we've solved before
+**Your Mission**: Build and maintain tools that provide real-time visibility into frontend performance, behavior, and issues. Each tool should solve a specific observability gap and continuously improve based on findings.
+
+### 🔧 Available Tools (tools/)
+
+#### Core Monitoring Tools
+- **`performance-monitor.js`** - Tracks Core Web Vitals, bundle size, load times
+  - **When to use**: Before/after any performance changes, continuous monitoring
+  - **Usage**: `node tools/performance-monitor.js watch` or integrate into build process
+  - **Maintenance**: Update thresholds based on performance discoveries
+
+- **`bundle-analyzer.js`** - Analyzes JavaScript bundle size and composition
+  - **When to use**: After adding dependencies, before major releases
+  - **Usage**: `npm run build && node tools/bundle-analyzer.js`
+  - **Maintenance**: Add new file type analysis as the app grows
+
+- **`error-tracker.js`** - Captures and categorizes frontend errors
+  - **When to use**: During development, user testing, production monitoring
+  - **Usage**: `node tools/error-tracker.js monitor` 
+  - **Maintenance**: Update error patterns as you discover new failure modes
+
+#### User Experience Tools
+- **`mobile-tester.js`** - Simulates mobile conditions and interactions
+  - **When to use**: After UI changes, before mobile releases
+  - **Usage**: `node tools/mobile-tester.js test [url]`
+  - **Maintenance**: Add new mobile scenarios based on user reports
+
+- **`accessibility-checker.js`** - Validates WCAG compliance and keyboard navigation
+  - **When to use**: After UI changes, during feature development
+  - **Usage**: `node tools/accessibility-checker.js scan`
+  - **Maintenance**: Update rules based on accessibility feedback
+
+#### Development Workflow Tools
+- **`component-analyzer.js`** - Analyzes component usage and optimization opportunities
+  - **When to use**: During refactoring, before major component changes
+  - **Usage**: `node tools/component-analyzer.js analyze src/components`
+  - **Maintenance**: Add new analysis patterns as architecture evolves
+
+### 🔄 Tool Development Lifecycle
+
+#### When to Build New Tools
+1. **Observability Gap**: You need insights that existing tools don't provide
+2. **Repetitive Tasks**: You're manually checking the same things repeatedly
+3. **Problem Prevention**: You want to catch issues before they affect users
+4. **Performance Tracking**: You need to measure improvements over time
+
+#### Tool Creation Process
+```javascript
+// Template for new tools
+class NewFrontendTool {
+  constructor(config) {
+    this.projectContext = this.loadProjectContext();
+    this.setupLogging();
+    this.validateEnvironment();
+  }
+  
+  async monitor() {
+    // Core monitoring logic
+    // Always include: measurement, logging, alerting
+  }
+  
+  async analyze() {
+    // Analysis and recommendations
+    // Always include: trend analysis, actionable insights
+  }
+  
+  generateReport() {
+    // Human-readable outputs
+    // Always include: current state, changes needed, next steps
+  }
+}
+```
+
+#### Tool Maintenance Principles
+1. **Responsive to Findings**: Update tools based on what you discover
+2. **Performance Conscious**: Tools shouldn't slow down development
+3. **Self-Documenting**: Clear usage instructions and examples
+4. **Integration Ready**: Easy to use in CI/CD and development workflows
+
+### 📊 Tool Usage Patterns
+
+#### Daily Development Workflow
+```bash
+# Morning routine - check system health
+node tools/performance-monitor.js status
+node tools/error-tracker.js overnight-summary
+
+# Before making changes - baseline measurement
+node tools/performance-monitor.js baseline
+
+# After changes - impact measurement
+node tools/performance-monitor.js compare
+node tools/bundle-analyzer.js check
+```
+
+#### Pre-Release Validation
+```bash
+# Comprehensive testing suite
+node tools/mobile-tester.js full-suite
+node tools/accessibility-checker.js complete
+node tools/performance-monitor.js release-check
+node tools/component-analyzer.js optimization-report
+```
+
+#### Problem Investigation
+```bash
+# When issues are reported
+node tools/error-tracker.js analyze [time-range]
+node tools/performance-monitor.js investigate [specific-metric]
+node tools/mobile-tester.js reproduce [user-scenario]
+```
+
+### 🧰 Knowledge Base (docs/)
+
+#### KNOWLEDGE.md Structure
+```markdown
+## Tool Development History
+- [Date] Created performance-monitor.js to track Core Web Vitals
+- [Date] Enhanced bundle-analyzer.js with tree-shaking recommendations
+- [Date] Built mobile-tester.js after iOS Safari issues
+
+## Frontend Discoveries
 - Performance optimizations that worked
-- Browser-specific issues and workarounds
-- Code patterns that work well for our project
+- Browser-specific issues and solutions
+- Component patterns that scale well
 
-### tests/ (if available)
-- Automated tests for critical user flows
-- Performance tests for key pages
-- Accessibility validation scripts
+## Tool Effectiveness Metrics
+- Problems caught before production: X%
+- Average time to identify performance issues: X minutes
+- Tools that provided actionable insights: [list]
+```
 
-### tools/ (if available)
-- Scripts for measuring performance
-- Development utilities
-- Build and deployment helpers
+## AI Agent Problem-Solving Methodology
 
-## Getting Started on a Problem
+### 1. Tool-First Investigation
+- **Start monitoring immediately**: `node tools/performance-monitor.js watch` + `node tools/error-tracker.js monitor`
+- **Gather baseline data**: Run relevant tools to understand current state
+- **Reproduce with instrumentation**: Use tools to capture the issue happening
+- **Check tool history**: Review logs for patterns or previous occurrences
 
-### 1. Understand the Current State
-- What exactly is happening vs. what should happen?
-- Can you reproduce the problem consistently?
-- Which browsers/devices are affected?
-- Are there any error messages in the browser console?
+### 2. Build Investigation Tools (if needed)
+- **Observability gap?** Create custom monitoring for this specific issue
+- **Repetitive testing?** Build automated reproduction scripts
+- **Complex debugging?** Create specialized analysis tools
+- **Example**: If mobile Safari issues, build `mobile-safari-debugger.js`
 
-### 2. Check Our Knowledge Base
-- Look in `docs/KNOWLEDGE.md` for similar issues
-- Check if we've solved this type of problem before
-- See what patterns or solutions have worked
+### 3. Tool-Guided Analysis
+```javascript
+// Example: Creating issue-specific tooling
+class MobileSafariDebugger {
+  async captureUserAgent() { /* ... */ }
+  async simulateTouch() { /* ... */ }
+  async measureInteractionDelay() { /* ... */ }
+  async generateReport() { /* ... */ }
+}
+```
 
-### 3. Plan the Approach
-- What's the smallest change that could fix this?
-- How will we test the fix?
-- What could this change break?
-- How will we measure success?
+### 4. Implement with Continuous Validation
+- **Before changes**: Use tools to establish performance baseline
+- **During changes**: Monitor tools for real-time impact feedback
+- **After changes**: Run full tool suite to validate improvements
+- **Document in tools**: Update tool thresholds and patterns based on findings
 
-### 4. Implement and Validate
-- Make the change
-- Test thoroughly (including edge cases)
-- Check that existing functionality still works
-- Measure the improvement if it's performance-related
+### 5. Enhance Tooling Based on Learnings
+- **Update existing tools**: Improve detection of similar issues
+- **Create new tools**: Build monitoring for newly discovered problem areas
+- **Share tool improvements**: Document new tool capabilities in KNOWLEDGE.md
+- **Automate prevention**: Add checks to prevent this type of issue
 
-### 5. Document the Solution
-- Update `docs/KNOWLEDGE.md` with what was learned
-- Include the problem, solution, and why it worked
-- Note any patterns that could apply to future issues
+### 6. Tool-Enhanced Documentation
+Update `docs/KNOWLEDGE.md` with:
+```markdown
+## Issue: [Problem Name]
+**Detection**: Which tools caught this (or should have)
+**Investigation**: What new tools were needed
+**Solution**: Technical fix implemented
+**Prevention**: New monitoring/tools to prevent recurrence
+**Tool Updates**: How existing tools were improved
+```
 
 ## Common Tools and Commands
 

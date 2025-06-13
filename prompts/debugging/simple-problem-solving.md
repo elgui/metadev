@@ -19,11 +19,13 @@ WHAT I'VE TRIED:
 [List what you already attempted]
 
 HELP ME:
-1. Understand what's actually causing this
-2. Fix it step by step
-3. Make sure it doesn't break again
+1. Build tools to observe what's actually happening in real-time
+2. Use data from those tools to understand the root cause
+3. Fix it step by step with continuous monitoring
+4. Create tools to prevent this type of issue in the future
+5. Document both the solution AND the new tooling capabilities
 
-Start by exploring the workspace files to understand our current setup.
+Start by deploying monitoring tools and building any missing observability for this specific issue.
 ```
 
 ## Examples That Work
@@ -46,11 +48,13 @@ WHAT I'VE TRIED:
 - Asked other developers (they're not sure either)
 
 HELP ME:
-1. Understand what's actually causing this
-2. Fix it step by step  
-3. Make sure it doesn't break again
+1. Build tools to monitor this specific mobile interaction issue
+2. Use real-time data to understand why Safari behaves differently
+3. Fix it step by step with continuous mobile testing
+4. Create tools to catch mobile Safari issues early in development
+5. Document both the technical solution and the new mobile testing capabilities
 
-Start by exploring the workspace files to understand our current setup.
+Start by creating mobile Safari monitoring tools and observing the actual user interaction.
 ```
 
 ### Backend Problem
@@ -71,11 +75,13 @@ WHAT I'VE TRIED:
 - Restarting the server (temporarily fixes it)
 
 HELP ME:
-1. Understand what's actually causing this
-2. Fix it step by step
-3. Make sure it doesn't break again
+1. Build tools to monitor concurrent user registration requests
+2. Use database monitoring to identify the exact race condition
+3. Fix it step by step with load testing validation
+4. Create tools to detect concurrency issues before they reach production
+5. Document both the technical solution and the new concurrency testing tools
 
-Start by exploring the workspace files to understand our current setup.
+Start by building race condition monitoring tools and reproducing the issue with instrumentation.
 ```
 
 ### Admin Dashboard Problem
@@ -96,11 +102,13 @@ WHAT I'VE TRIED:
 - Checking if other admin pages are slow (they're not)
 
 HELP ME:
-1. Understand what's actually causing this
-2. Fix it step by step
-3. Make sure it doesn't break again
+1. Build tools to monitor admin panel performance with large datasets
+2. Use real-time performance data to identify memory and rendering bottlenecks
+3. Fix it step by step with performance testing on realistic data volumes
+4. Create tools to prevent admin performance issues as data grows
+5. Document both the technical solution and the new admin performance monitoring
 
-Start by exploring the workspace files to understand our current setup.
+Start by building large dataset monitoring tools and measuring actual admin panel resource usage.
 ```
 
 ## Making It Work
@@ -119,14 +127,15 @@ This helps the AI avoid suggesting things you already attempted and shows what d
 ### Ask for Step-by-Step Help
 AI assistants work better when they can break problems down into smaller parts.
 
-## What the AI Should Do
+## What the AI Agent Should Do
 
-1. **Read your workspace context** - Understand your specific setup
-2. **Ask clarifying questions** if the problem isn't clear
-3. **Identify the root cause** - Not just treat symptoms
-4. **Suggest a specific fix** - With clear steps to implement
-5. **Help you test the fix** - Make sure it actually works
-6. **Update your KNOWLEDGE.md** - So you remember how to handle this type of issue
+1. **Deploy monitoring tools immediately** - Start observing the system in real-time
+2. **Build missing observability tools** - Create custom monitoring for this specific issue
+3. **Use data to understand root cause** - Not just treat symptoms
+4. **Implement with continuous monitoring** - Watch tools for real-time feedback during fixes
+5. **Validate with comprehensive tooling** - Test the solution thoroughly
+6. **Enhance the tooling infrastructure** - Improve tools based on what was learned
+7. **Document both solution and tooling** - Update KNOWLEDGE.md with technical fix AND new tool capabilities
 
 ## Red Flags
 
@@ -139,18 +148,19 @@ If your AI assistant:
 
 ...then try rephrasing your request to emphasize the workspace context and ask for step-by-step guidance.
 
-## Building Your Debugging Skills
+## Building Your AI Agent Tooling Skills
 
 ### Each time you solve a problem:
-1. **Document it** - Add the solution to your KNOWLEDGE.md
-2. **Look for patterns** - Is this similar to previous issues?
-3. **Improve your setup** - Can you prevent this type of problem?
-4. **Share what works** - Help other developers learn from your experience
+1. **Document both solution AND tooling** - Add the technical fix and new tool capabilities to KNOWLEDGE.md
+2. **Identify tool patterns** - Can these monitoring approaches apply to similar issues?
+3. **Enhance your observability infrastructure** - Build tools to prevent this class of problems
+4. **Share tooling innovations** - Help other developers learn from your AI agent tools
 
-### Questions to ask yourself:
-- What could I have done to catch this earlier?
-- Is there a pattern here I should watch for?
-- How can I make this type of problem easier to debug next time?
-- What would help other developers avoid this issue?
+### Questions to build better AI agent capabilities:
+- What monitoring tools could have caught this earlier?
+- Can I build automated detection for this pattern?
+- How can I make this type of problem self-diagnosing?
+- What observability gaps did this issue reveal?
+- How can my AI agent tools become more proactive?
 
-This approach builds your debugging skills over time instead of just fixing individual problems.
+This approach builds your AI agent's diagnostic and preventive capabilities over time, creating a continuously improving development environment.
