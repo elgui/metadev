@@ -255,31 +255,49 @@ node tools/bulk-operation-optimizer.js recommendations
 node tools/export-performance-tester.js stress-test
 ```
 
-### 🧰 Admin Knowledge Base (docs/)
+## AI Workspace Documentation Standards
 
-#### KNOWLEDGE.md Structure for Admin
+**Your Responsibility**: Maintain this AI-CONTEXT.md file as the authoritative source of truth for this workspace. This file MUST be updated at the end of every session.
+
+### Mandatory End-of-Session Updates
+
+#### Tool Catalog Maintenance
+- **New Tools**: Add any tools created during the session to the catalog
+- **Tool Enhancements**: Document improvements made to existing tools
+- **Usage Patterns**: Update tool usage examples based on new discoveries
+- **Analytics Insights**: Note any business intelligence or workflow improvements discovered
+
+#### Documentation Quality Standards
+- **Accuracy**: All information must be current and correct
+- **Completeness**: No gaps in tool descriptions or usage instructions
+- **Clarity**: All entries must be immediately actionable
+- **Authority**: This file is the definitive reference for this workspace
+
+#### Required Updates Checklist
 ```markdown
-## Tool Development History
-- [Date] Built user-behavior-analyzer.js for conversion insights
-- [Date] Created performance-dashboard-monitor.js after slowdowns
-- [Date] Developed bulk-operation-optimizer.js for large exports
+## Session Update: [Date]
+### Tools Added/Enhanced:
+- [Tool name]: [What was added/changed]
 
-## Admin Workflow Discoveries
-- Optimization techniques that reduced admin task time by X%
-- Data visualization approaches that improved decision-making
-- Bulk operation patterns that scale to Y records
+### Business Intelligence Gained:
+- [Key discoveries about user behavior, admin workflows, or business metrics]
 
-## Tool Effectiveness Metrics
-- Admin task time reduction: X% improvement
-- Data quality issues caught: X count
-- Performance bottlenecks identified: X count
-- Business insights generated: X actionable recommendations
+### Documentation Improvements:
+- [How this file or KNOWLEDGE.md was enhanced]
 
-## Administrative Intelligence Insights
-- User behavior patterns that impact business metrics
-- Admin workflow optimizations that improve efficiency
-- Data management practices that ensure quality
+### Administrative Capability Evolution:
+- [How the admin analytics/tooling infrastructure became more capable]
 ```
+
+### KNOWLEDGE.md Standards
+
+Each entry in docs/KNOWLEDGE.md MUST include:
+- **Business Pattern**: What type of admin/business issue this solves
+- **Tool Evolution**: How analytics/monitoring tools were enhanced or created
+- **Solution Authority**: Definitive fix with clear implementation steps
+- **Business Impact**: How this affects admin efficiency or business metrics
+- **User Experience**: Any improvements to admin workflow or interface
+- **Tool Integration**: How new/enhanced tools fit into existing analytics infrastructure
 
 ## AI Agent Admin Problem-Solving Methodology
 

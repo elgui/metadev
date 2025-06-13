@@ -216,25 +216,49 @@ node tools/performance-monitor.js investigate [specific-metric]
 node tools/mobile-tester.js reproduce [user-scenario]
 ```
 
-### 🧰 Knowledge Base (docs/)
+## AI Workspace Documentation Standards
 
-#### KNOWLEDGE.md Structure
+**Your Responsibility**: Maintain this AI-CONTEXT.md file as the authoritative source of truth for this workspace. This file MUST be updated at the end of every session.
+
+### Mandatory End-of-Session Updates
+
+#### Tool Catalog Maintenance
+- **New Tools**: Add any tools created during the session to the catalog
+- **Tool Enhancements**: Document improvements made to existing tools
+- **Usage Patterns**: Update tool usage examples based on new discoveries
+- **Tool Performance**: Note any performance improvements or issues discovered
+
+#### Documentation Quality Standards
+- **Accuracy**: All information must be current and correct
+- **Completeness**: No gaps in tool descriptions or usage instructions
+- **Clarity**: All entries must be immediately actionable
+- **Authority**: This file is the definitive reference for this workspace
+
+#### Required Updates Checklist
 ```markdown
-## Tool Development History
-- [Date] Created performance-monitor.js to track Core Web Vitals
-- [Date] Enhanced bundle-analyzer.js with tree-shaking recommendations
-- [Date] Built mobile-tester.js after iOS Safari issues
+## Session Update: [Date]
+### Tools Added/Enhanced:
+- [Tool name]: [What was added/changed]
 
-## Frontend Discoveries
-- Performance optimizations that worked
-- Browser-specific issues and solutions
-- Component patterns that scale well
+### Knowledge Gained:
+- [Key discoveries that change how we approach problems]
 
-## Tool Effectiveness Metrics
-- Problems caught before production: X%
-- Average time to identify performance issues: X minutes
-- Tools that provided actionable insights: [list]
+### Documentation Improvements:
+- [How this file or KNOWLEDGE.md was enhanced]
+
+### Capability Evolution:
+- [How the workspace became more capable]
 ```
+
+### KNOWLEDGE.md Standards
+
+Each entry in docs/KNOWLEDGE.md MUST include:
+- **Problem Pattern**: What type of issue this solves
+- **Tool Evolution**: How tools were enhanced or created
+- **Solution Authority**: Definitive fix with clear steps
+- **Reusability**: How this applies to future similar problems
+- **Performance Impact**: Measurable improvements achieved
+- **Tool Integration**: How new/enhanced tools fit into existing catalog
 
 ## AI Agent Problem-Solving Methodology
 

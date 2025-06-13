@@ -7,7 +7,7 @@ Use this when something is too slow and you need to figure out why.
 ```
 I'm working in [client-workspace/admin-workspace/backend-workspace].
 
-Please read the AI-README.md file to understand our setup.
+Please read the AI-CONTEXT.md file to understand our setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 PERFORMANCE ISSUE:
 [What's slow and how slow it is]
@@ -21,13 +21,29 @@ CURRENT SPEED:
 TARGET SPEED:
 [How fast it should be]
 
-HELP ME:
-1. Find out what's actually causing the slowness
-2. Fix the main bottleneck first
-3. Measure the improvement
-4. Document what we learned
+AS THE AI WORKSPACE OWNER:
 
-Start by understanding our current monitoring setup from the workspace files.
+**PHASE 1: TOOL INVENTORY & DEPLOYMENT**
+1. **Audit existing performance tools**: Review the AI-CONTEXT.md tool catalog - which tools can measure this performance issue?
+2. **Deploy relevant monitoring**: Start existing performance tools that apply to this bottleneck
+3. **Identify measurement gaps**: What performance data is missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current performance tools be improved to provide needed metrics?
+5. **Create new tools only if necessary**: Build new performance tools only when existing ones cannot be enhanced
+6. **Follow performance tool standards**: Ensure all tools provide actionable performance insights
+
+**PHASE 3: DATA-DRIVEN OPTIMIZATION**
+7. **Analyze with performance data**: Use comprehensive tool outputs to identify actual bottlenecks
+8. **Optimize with monitoring**: Implement performance fixes while tools provide real-time feedback
+9. **Validate with measurements**: Prove optimizations work using before/after tool measurements
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update performance tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both optimization AND performance tooling evolution
+12. **Maintain workspace authority**: Ensure all performance documentation is clean, accurate, and authoritative
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing performance tools before creating anything new.
 ```
 
 ## Real Examples
@@ -36,7 +52,7 @@ Start by understanding our current monitoring setup from the workspace files.
 ```
 I'm working in client-workspace.
 
-Please read the AI-README.md file to understand our React setup.
+Please read the AI-CONTEXT.md file to understand our React setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 PERFORMANCE ISSUE:
 Our dashboard page takes 8-10 seconds to load and users are complaining
@@ -54,20 +70,36 @@ TARGET SPEED:
 - Should show loading state immediately
 - Should feel responsive
 
-HELP ME:
-1. Find out what's actually causing the slowness
-2. Fix the main bottleneck first
-3. Measure the improvement
-4. Document what we learned
+AS THE AI WORKSPACE OWNER:
 
-Start by understanding our current monitoring setup from the workspace files.
+**PHASE 1: TOOL INVENTORY & DEPLOYMENT**
+1. **Audit existing performance tools**: Review the AI-CONTEXT.md tool catalog - which tools can measure this performance issue?
+2. **Deploy relevant monitoring**: Start existing performance tools that apply to this bottleneck
+3. **Identify measurement gaps**: What performance data is missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current performance tools be improved to provide needed metrics?
+5. **Create new tools only if necessary**: Build new performance tools only when existing ones cannot be enhanced
+6. **Follow performance tool standards**: Ensure all tools provide actionable performance insights
+
+**PHASE 3: DATA-DRIVEN OPTIMIZATION**
+7. **Analyze with performance data**: Use comprehensive tool outputs to identify actual bottlenecks
+8. **Optimize with monitoring**: Implement performance fixes while tools provide real-time feedback
+9. **Validate with measurements**: Prove optimizations work using before/after tool measurements
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update performance tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both optimization AND performance tooling evolution
+12. **Maintain workspace authority**: Ensure all performance documentation is clean, accurate, and authoritative
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing performance tools before creating anything new.
 ```
 
 ### Slow API
 ```
 I'm working in backend-workspace.
 
-Please read the AI-README.md file to understand our Django API setup.
+Please read the AI-CONTEXT.md file to understand our Django API setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 PERFORMANCE ISSUE:
 API responses are taking 3-5 seconds during busy times
@@ -87,20 +119,22 @@ TARGET SPEED:
 - Even during busy periods
 - Should handle 100+ concurrent users
 
-HELP ME:
-1. Find out what's actually causing the slowness
-2. Fix the main bottleneck first
-3. Measure the improvement
-4. Document what we learned
+AS THE AI WORKSPACE OWNER:
+1. Build comprehensive monitoring tools to identify the actual bottlenecks
+2. Use real-time performance data to understand root causes
+3. Fix the main bottleneck first with continuous measurement
+4. Create tools to prevent performance regressions
+5. Document both the optimization AND the new monitoring capabilities
+6. Maintain and enhance the AI workspace performance infrastructure
 
-Start by understanding our current monitoring setup from the workspace files.
+You have full ownership and responsibility for everything in this AI workspace. Start by deploying performance monitoring tools and building any missing observability for this specific issue.
 ```
 
 ### Slow Admin Panel
 ```
 I'm working in admin-workspace.
 
-Please read the AI-README.md file to understand our admin dashboard setup.
+Please read the AI-CONTEXT.md file to understand our admin dashboard setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 PERFORMANCE ISSUE:
 User management page freezes browser when loading large datasets
@@ -120,13 +154,15 @@ TARGET SPEED:
 - Should stay responsive during loading
 - Should handle 10,000+ users without issues
 
-HELP ME:
-1. Find out what's actually causing the slowness
-2. Fix the main bottleneck first
-3. Measure the improvement
-4. Document what we learned
+AS THE AI WORKSPACE OWNER:
+1. Build comprehensive monitoring tools to identify the actual bottlenecks
+2. Use real-time performance data to understand root causes
+3. Fix the main bottleneck first with continuous measurement
+4. Create tools to prevent performance regressions
+5. Document both the optimization AND the new monitoring capabilities
+6. Maintain and enhance the AI workspace performance infrastructure
 
-Start by understanding our current monitoring setup from the workspace files.
+You have full ownership and responsibility for everything in this AI workspace. Start by deploying performance monitoring tools and building any missing observability for this specific issue.
 ```
 
 ## Performance Debugging Steps

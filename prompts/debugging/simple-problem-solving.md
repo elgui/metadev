@@ -7,7 +7,7 @@ Use this when something isn't working and you need help figuring out why.
 ```
 I'm working in [client-workspace/admin-workspace/backend-workspace].
 
-Please read the AI-README.md file to understand our setup.
+Please read the AI-CONTEXT.md file to understand our setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 THE PROBLEM:
 [Describe what's happening vs what should happen]
@@ -18,14 +18,29 @@ WHEN IT HAPPENS:
 WHAT I'VE TRIED:
 [List what you already attempted]
 
-HELP ME:
-1. Build tools to observe what's actually happening in real-time
-2. Use data from those tools to understand the root cause
-3. Fix it step by step with continuous monitoring
-4. Create tools to prevent this type of issue in the future
-5. Document both the solution AND the new tooling capabilities
+AS THE AI WORKSPACE OWNER:
 
-Start by deploying monitoring tools and building any missing observability for this specific issue.
+**PHASE 1: TOOL INVENTORY & DEPLOYMENT**
+1. **Audit existing tools**: Review the AI-CONTEXT.md tool catalog - which tools can help with this issue?
+2. **Deploy relevant tools**: Start existing monitoring tools that apply to this problem domain
+3. **Identify tool gaps**: What observability is missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current tools be improved to provide needed insights?
+5. **Create new tools only if necessary**: Build new tools only when existing ones cannot be enhanced
+6. **Follow tool development standards**: Ensure all tools meet workspace quality standards
+
+**PHASE 3: DATA-DRIVEN PROBLEM SOLVING**
+7. **Analyze with tool data**: Use comprehensive tool outputs to understand root cause
+8. **Implement with monitoring**: Fix step-by-step while tools provide real-time feedback
+9. **Validate with tools**: Prove the solution works using tool measurements
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both solution AND tool evolution
+12. **Maintain workspace authority**: Ensure all documentation is clean, accurate, and authoritative
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing tools before creating anything new.
 ```
 
 ## Examples That Work
@@ -34,7 +49,7 @@ Start by deploying monitoring tools and building any missing observability for t
 ```
 I'm working in client-workspace.
 
-Please read the AI-README.md file to understand our React setup.
+Please read the AI-CONTEXT.md file to understand our React setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 THE PROBLEM:
 When users click the "Save" button on our form, nothing happens. The button should save the data and show a success message.
@@ -47,21 +62,36 @@ WHAT I'VE TRIED:
 - Tested on different mobile browsers (same issue)
 - Asked other developers (they're not sure either)
 
-HELP ME:
-1. Build tools to monitor this specific mobile interaction issue
-2. Use real-time data to understand why Safari behaves differently
-3. Fix it step by step with continuous mobile testing
-4. Create tools to catch mobile Safari issues early in development
-5. Document both the technical solution and the new mobile testing capabilities
+AS THE AI WORKSPACE OWNER:
 
-Start by creating mobile Safari monitoring tools and observing the actual user interaction.
+**PHASE 1: TOOL INVENTORY & DEPLOYMENT**
+1. **Audit existing tools**: Review the AI-CONTEXT.md tool catalog - which tools can help with this issue?
+2. **Deploy relevant tools**: Start existing monitoring tools that apply to this problem domain
+3. **Identify tool gaps**: What observability is missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current tools be improved to provide needed insights?
+5. **Create new tools only if necessary**: Build new tools only when existing ones cannot be enhanced
+6. **Follow tool development standards**: Ensure all tools meet workspace quality standards
+
+**PHASE 3: DATA-DRIVEN PROBLEM SOLVING**
+7. **Analyze with tool data**: Use comprehensive tool outputs to understand root cause
+8. **Implement with monitoring**: Fix step-by-step while tools provide real-time feedback
+9. **Validate with tools**: Prove the solution works using tool measurements
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both solution AND tool evolution
+12. **Maintain workspace authority**: Ensure all documentation is clean, accurate, and authoritative
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing tools before creating anything new.
 ```
 
 ### Backend Problem
 ```
 I'm working in backend-workspace.
 
-Please read the AI-README.md file to understand our Django API setup.
+Please read the AI-CONTEXT.md file to understand our Django API setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 THE PROBLEM:
 Our API sometimes returns errors when multiple users try to create accounts at the same time. Should always work.
@@ -74,21 +104,36 @@ WHAT I'VE TRIED:
 - Googling the error message (found some suggestions but wasn't sure how to apply them)
 - Restarting the server (temporarily fixes it)
 
-HELP ME:
-1. Build tools to monitor concurrent user registration requests
-2. Use database monitoring to identify the exact race condition
-3. Fix it step by step with load testing validation
-4. Create tools to detect concurrency issues before they reach production
-5. Document both the technical solution and the new concurrency testing tools
+AS THE AI WORKSPACE OWNER:
 
-Start by building race condition monitoring tools and reproducing the issue with instrumentation.
+**PHASE 1: TOOL INVENTORY & DEPLOYMENT**
+1. **Audit existing tools**: Review the AI-CONTEXT.md tool catalog - which tools can help with this issue?
+2. **Deploy relevant tools**: Start existing monitoring tools that apply to this problem domain
+3. **Identify tool gaps**: What observability is missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current tools be improved to provide needed insights?
+5. **Create new tools only if necessary**: Build new tools only when existing ones cannot be enhanced
+6. **Follow tool development standards**: Ensure all tools meet workspace quality standards
+
+**PHASE 3: DATA-DRIVEN PROBLEM SOLVING**
+7. **Analyze with tool data**: Use comprehensive tool outputs to understand root cause
+8. **Implement with monitoring**: Fix step-by-step while tools provide real-time feedback
+9. **Validate with tools**: Prove the solution works using tool measurements
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both solution AND tool evolution
+12. **Maintain workspace authority**: Ensure all documentation is clean, accurate, and authoritative
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing tools before creating anything new.
 ```
 
 ### Admin Dashboard Problem
 ```
 I'm working in admin-workspace.
 
-Please read the AI-README.md file to understand our admin panel setup.
+Please read the AI-CONTEXT.md file to understand our admin panel setup. You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
 
 THE PROBLEM:
 The user list page takes 30+ seconds to load when we have lots of users. Should load quickly.
@@ -101,14 +146,29 @@ WHAT I'VE TRIED:
 - Refreshing the page (same slow loading)
 - Checking if other admin pages are slow (they're not)
 
-HELP ME:
-1. Build tools to monitor admin panel performance with large datasets
-2. Use real-time performance data to identify memory and rendering bottlenecks
-3. Fix it step by step with performance testing on realistic data volumes
-4. Create tools to prevent admin performance issues as data grows
-5. Document both the technical solution and the new admin performance monitoring
+AS THE AI WORKSPACE OWNER:
 
-Start by building large dataset monitoring tools and measuring actual admin panel resource usage.
+**PHASE 1: TOOL INVENTORY & DEPLOYMENT**
+1. **Audit existing tools**: Review the AI-CONTEXT.md tool catalog - which tools can help with this issue?
+2. **Deploy relevant tools**: Start existing monitoring tools that apply to this problem domain
+3. **Identify tool gaps**: What observability is missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current tools be improved to provide needed insights?
+5. **Create new tools only if necessary**: Build new tools only when existing ones cannot be enhanced
+6. **Follow tool development standards**: Ensure all tools meet workspace quality standards
+
+**PHASE 3: DATA-DRIVEN PROBLEM SOLVING**
+7. **Analyze with tool data**: Use comprehensive tool outputs to understand root cause
+8. **Implement with monitoring**: Fix step-by-step while tools provide real-time feedback
+9. **Validate with tools**: Prove the solution works using tool measurements
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both solution AND tool evolution
+12. **Maintain workspace authority**: Ensure all documentation is clean, accurate, and authoritative
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing tools before creating anything new.
 ```
 
 ## Making It Work
@@ -129,13 +189,13 @@ AI assistants work better when they can break problems down into smaller parts.
 
 ## What the AI Agent Should Do
 
-1. **Deploy monitoring tools immediately** - Start observing the system in real-time
-2. **Build missing observability tools** - Create custom monitoring for this specific issue
-3. **Use data to understand root cause** - Not just treat symptoms
-4. **Implement with continuous monitoring** - Watch tools for real-time feedback during fixes
-5. **Validate with comprehensive tooling** - Test the solution thoroughly
-6. **Enhance the tooling infrastructure** - Improve tools based on what was learned
-7. **Document both solution and tooling** - Update KNOWLEDGE.md with technical fix AND new tool capabilities
+1. **Start with tool inventory** - Always review existing tools before building new ones
+2. **Deploy existing tools first** - Use current monitoring capabilities immediately
+3. **Enhance before creating** - Improve existing tools rather than building from scratch
+4. **Follow systematic phases** - Complete each phase before moving to the next
+5. **Maintain authoritative documentation** - Keep AI-CONTEXT.md and KNOWLEDGE.md clean and current
+6. **Update tool catalog religiously** - Document every tool enhancement and addition
+7. **Think infrastructure, not just solutions** - Build capabilities that compound over time
 
 ## Red Flags
 
@@ -148,19 +208,25 @@ If your AI assistant:
 
 ...then try rephrasing your request to emphasize the workspace context and ask for step-by-step guidance.
 
-## Building Your AI Agent Tooling Skills
+## Building Systematic AI Agent Capabilities
 
-### Each time you solve a problem:
-1. **Document both solution AND tooling** - Add the technical fix and new tool capabilities to KNOWLEDGE.md
-2. **Identify tool patterns** - Can these monitoring approaches apply to similar issues?
-3. **Enhance your observability infrastructure** - Build tools to prevent this class of problems
-4. **Share tooling innovations** - Help other developers learn from your AI agent tools
+### After each problem-solving session:
+1. **Tool Catalog Maintenance** - Update AI-CONTEXT.md with new/enhanced tools and their capabilities
+2. **Documentation Authority** - Ensure KNOWLEDGE.md entries are clean, accurate, and reusable
+3. **Tool Evolution Tracking** - Document how existing tools were enhanced, not just new ones created
+4. **Capability Compounding** - Identify patterns that make future problems easier to solve
 
-### Questions to build better AI agent capabilities:
-- What monitoring tools could have caught this earlier?
-- Can I build automated detection for this pattern?
-- How can I make this type of problem self-diagnosing?
-- What observability gaps did this issue reveal?
-- How can my AI agent tools become more proactive?
+### Questions for continuous improvement:
+- Which existing tools could be enhanced to prevent similar issues?
+- How can the tool catalog be organized for faster problem-solving?
+- What documentation gaps make problem-solving harder than it should be?
+- How can tool reuse be maximized while capability growth continues?
+- Are the workspace documentation standards being maintained at high quality?
 
-This approach builds your AI agent's diagnostic and preventive capabilities over time, creating a continuously improving development environment.
+### Systematic Workspace Enhancement:
+1. **Tool Reuse Rate** - Measure how often existing tools solve new problems
+2. **Documentation Quality** - Ensure all entries are authoritative and actionable
+3. **Capability Growth** - Track how tool enhancements compound over time
+4. **Knowledge Accessibility** - Organize information for rapid retrieval and application
+
+This systematic approach builds an increasingly powerful AI agent workspace that becomes more capable with each problem solved.

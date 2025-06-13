@@ -251,31 +251,49 @@ node tools/dependency-health-checker.js status
 python tools/database-performance-tracker.py incident-mode
 ```
 
-### 🧰 Backend Knowledge Base (docs/)
+## AI Workspace Documentation Standards
 
-#### KNOWLEDGE.md Structure for Backend
+**Your Responsibility**: Maintain this AI-CONTEXT.md file as the authoritative source of truth for this workspace. This file MUST be updated at the end of every session.
+
+### Mandatory End-of-Session Updates
+
+#### Tool Catalog Maintenance
+- **New Tools**: Add any tools created during the session to the catalog
+- **Tool Enhancements**: Document improvements made to existing tools
+- **Usage Patterns**: Update tool usage examples based on new discoveries
+- **Performance Insights**: Note any performance improvements or bottlenecks discovered
+
+#### Documentation Quality Standards
+- **Accuracy**: All information must be current and correct
+- **Completeness**: No gaps in tool descriptions or usage instructions
+- **Clarity**: All entries must be immediately actionable
+- **Authority**: This file is the definitive reference for this workspace
+
+#### Required Updates Checklist
 ```markdown
-## Tool Development History
-- [Date] Built api-health-monitor.js after timeout issues
-- [Date] Enhanced query-optimizer.py with index recommendations
-- [Date] Created security-scanner.py for automated vulnerability checks
+## Session Update: [Date]
+### Tools Added/Enhanced:
+- [Tool name]: [What was added/changed]
 
-## Backend Performance Discoveries
-- Database optimization techniques that provided X% improvement
-- API design patterns that scale to Y concurrent users
-- Caching strategies that reduced load by Z%
+### System Insights Gained:
+- [Key discoveries about backend performance, security, or reliability]
 
-## Tool Effectiveness Metrics
-- Production issues prevented: X count
-- Average time to identify performance bottlenecks: X minutes
-- Security vulnerabilities caught in development: X count
-- Database query optimization impact: X% improvement
+### Documentation Improvements:
+- [How this file or KNOWLEDGE.md was enhanced]
 
-## System Architecture Insights
-- Scaling patterns that work for our stack
-- Integration patterns for external services
-- Security measures that balance protection and performance
+### Infrastructure Evolution:
+- [How the backend monitoring/tooling infrastructure became more capable]
 ```
+
+### KNOWLEDGE.md Standards
+
+Each entry in docs/KNOWLEDGE.md MUST include:
+- **System Pattern**: What type of backend issue this solves
+- **Tool Evolution**: How monitoring/analysis tools were enhanced or created
+- **Solution Authority**: Definitive fix with clear implementation steps
+- **Scalability Impact**: How this affects system performance under load
+- **Security Considerations**: Any security implications or improvements
+- **Tool Integration**: How new/enhanced tools fit into existing monitoring infrastructure
 
 ## AI Agent Backend Problem-Solving Methodology
 

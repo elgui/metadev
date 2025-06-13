@@ -9,6 +9,8 @@ MISSION: Build [specific feature] that [specific user outcome]
 
 WORKSPACE: [client-workspace | admin-workspace | backend-workspace]
 
+You are the owner of this entire AI workspace - responsible for all tools, documentation, and capabilities within it.
+
 CONTEXT:
 - Current user pain point: [describe the problem users are experiencing]
 - Business impact: [why this feature matters to the business]
@@ -33,17 +35,30 @@ CONSTRAINTS:
 - Timeline: [deadline or urgency level]
 - Resources: [any resource limitations]
 
-AI AGENT INSTRUCTIONS:
-1. **TOOL-FIRST INVESTIGATION**: Immediately start relevant monitoring tools to capture system state
-2. **BUILD INVESTIGATION TOOLING**: Create custom tools if existing ones don't provide needed insights
-3. **ANALYZE WITH DATA**: Use tool outputs to understand root causes, not just symptoms
-4. **IMPLEMENT WITH MONITORING**: Make changes while tools provide real-time feedback
-5. **VALIDATE WITH TOOLS**: Use comprehensive tool suite to verify solutions work
-6. **ENHANCE TOOLING**: Improve existing tools and create new ones based on learnings
-7. **DOCUMENT TOOL EVOLUTION**: Update KNOWLEDGE.md with both solutions AND tool improvements
-8. **SHARE TOOLING INSIGHTS**: Update AI-CONTEXT.md catalog with new tools and usage patterns
+AS THE AI WORKSPACE OWNER:
 
-Begin by deploying your monitoring arsenal and building any missing observability tools.
+**PHASE 1: TOOL INVENTORY & CAPABILITY ASSESSMENT**
+1. **Audit existing tools**: Review the AI-CONTEXT.md tool catalog - which tools can support this feature development?
+2. **Deploy relevant tools**: Start existing monitoring and development tools that apply to this feature domain
+3. **Identify capability gaps**: What development/testing capabilities are missing that existing tools don't provide?
+
+**PHASE 2: TOOL ENHANCEMENT OR CREATION**
+4. **Enhance existing tools FIRST**: Can current tools be improved to support this feature development?
+5. **Create new tools only if necessary**: Build new development tools only when existing ones cannot be enhanced
+6. **Follow development tool standards**: Ensure all tools support feature validation and monitoring
+
+**PHASE 3: FEATURE DEVELOPMENT WITH MONITORING**
+7. **Develop with tool validation**: Build feature incrementally while tools provide real-time feedback
+8. **Test with comprehensive tooling**: Validate feature works using full tool suite
+9. **Performance validate**: Ensure feature meets performance targets using measurement tools
+
+**PHASE 4: WORKSPACE MAINTENANCE (MANDATORY)**
+10. **Update tool catalog**: Add new tools and document enhancements in AI-CONTEXT.md
+11. **Enhance documentation**: Improve KNOWLEDGE.md with both feature implementation AND development tooling evolution
+12. **Maintain workspace authority**: Ensure all development documentation is clean, accurate, and authoritative
+13. **Feature integration documentation**: Update AI-CONTEXT.md with new capabilities and usage patterns
+
+You have full ownership and responsibility for everything in this AI workspace. BEGIN with Phase 1: audit existing development tools before creating anything new.
 ```
 
 ## Example Usage
