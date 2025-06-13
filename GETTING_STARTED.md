@@ -1,54 +1,55 @@
-# Getting Started: Your First AI Workspace
+# Getting Started: Your First AI Agent Context Area
 
-This guide walks you through setting up your first AI workspace in 10-15 minutes.
+This guide walks you through setting up your first AI agent context area in 10-15 minutes.
+
+**Important**: These AI context areas are **separate from your actual code**. They exist solely to give AI assistants the context they need to help you effectively.
 
 ## Step 1: Pick Your Starting Point (2 minutes)
 
-Don't try to set up everything at once. Choose **one area** where you need the most help:
+Don't try to set up everything at once. Choose **one area** where you need the most AI help:
 
-### Choose Frontend if:
+### Choose Frontend AI Context if:
 - Users are reporting bugs with the interface
 - Pages are loading slowly
 - You're building new user-facing features
 - Mobile experience has issues
 
-### Choose Backend if:
+### Choose Backend AI Context if:
 - API responses are slow or error-prone
 - Database queries need optimization
 - You're adding new API endpoints
 - Authentication/security needs work
 
-### Choose Admin if:
+### Choose Admin AI Context if:
 - Admin panel is slow with large datasets
 - You need new admin functionality
 - Data visualization needs improvement
 - Admin workflow could be more efficient
 
-## Step 2: Create Your Workspace (3 minutes)
+## Step 2: Create Your AI Agent Context Area (3 minutes)
 
-### Create the Directory Structure
+### Create the AI-Specific Directory Structure
 ```bash
-# In your project root, create your chosen workspace
-mkdir client-workspace     # or admin-workspace or backend-workspace
-cd client-workspace
+# In your project root, create AI agent context areas (separate from your code)
+mkdir -p ai-agents/frontend/tools ai-agents/frontend/docs ai-agents/frontend/tests ai-agents/frontend/logs
+cd ai-agents/frontend
 
-# Create the basic structure
-mkdir docs tools tests logs
-touch docs/KNOWLEDGE.md
+# Your actual code stays where it is - this is ONLY for AI context
+ls ../..  # Your normal src/, components/, api/ folders are still here
 ```
 
-### Copy the Template
+### Copy the AI Context Template
 ```bash
-# Download the appropriate template
-curl -o AI-README.md https://raw.githubusercontent.com/yourusername/metadev/main/templates/client-ai-readme.md
+# Download the appropriate AI context template
+curl -o AI-CONTEXT.md https://raw.githubusercontent.com/yourusername/metadev/main/templates/frontend-ai-context.md
 
 # Or copy from this repo if you have it locally
-cp ../metadev/templates/client-ai-readme.md AI-README.md
+cp ../../metadev/templates/frontend-ai-context.md AI-CONTEXT.md
 ```
 
 ## Step 3: Customize for Your Project (5 minutes)
 
-### Edit Your AI-README.md
+### Edit Your AI-CONTEXT.md
 
 Replace the placeholder sections with your actual setup:
 
@@ -98,10 +99,10 @@ Replace the generic examples with issues you actually face:
 
 ### Test with a Real Problem
 
-Pick a current issue and try the workspace approach:
+Pick a current issue and try the AI agent context approach:
 
 ```
-I'm working in client-workspace. Please read the AI-README.md file to understand our React setup.
+I'm working with the frontend of our application. Please read the ai-agents/frontend/AI-CONTEXT.md file to understand our React setup.
 
 PROBLEM: Our dashboard page takes 7 seconds to load on mobile and users are complaining.
 
@@ -125,15 +126,15 @@ HELP ME:
 1. Identify what's causing the slow mobile loading
 2. Fix the main bottleneck first
 3. Measure the improvement
-4. Document what we learn for future reference
+4. Document what we learn in ai-agents/frontend/docs/KNOWLEDGE.md
 
-Start by understanding our current setup from the workspace files.
+Start by understanding our current setup from the AI context files.
 ```
 
 ### What Should Happen
 
 A good AI assistant should:
-1. Read your AI-README.md to understand your setup
+1. Read your AI-CONTEXT.md to understand your setup
 2. Ask clarifying questions about your specific tech stack
 3. Suggest specific optimizations (code splitting, image optimization, etc.)
 4. Help you measure before/after performance
@@ -178,46 +179,60 @@ After you solve the problem, add what you learned:
 ## Common First-Time Issues
 
 ### "The AI is still giving generic advice"
-- Make sure your AI-README.md has specific details about your tech stack
+- Make sure your AI-CONTEXT.md has specific details about your tech stack
 - Include your actual problems, not the template examples
-- Start your requests with "I'm working in [workspace-name]. Please read the AI-README.md..."
+- Start your requests with "I'm working with the [frontend/backend/admin] of our application. Please read the ai-agents/[area]/AI-CONTEXT.md..."
 
-### "I don't know what to put in the AI-README.md"
+### "I don't know what to put in the AI-CONTEXT.md"
 - Start simple - just list your main technologies
 - Add one real problem you're facing
-- You can always add more details later as you use the workspace
+- You can always add more details later as you use the AI context area
 
 ### "This seems like a lot of setup for one problem"
-- You only need to set up one workspace to start
+- You only need to set up one AI context area to start
 - The setup pays off when you have multiple conversations about the same codebase
 - Each problem you solve builds knowledge for the next one
+
+### "Where does this fit with my existing project?"
+```
+your-project/
+├── src/                    # Your actual code (unchanged)
+├── components/             # Your actual code (unchanged)
+├── api/                    # Your actual code (unchanged)
+├── package.json            # Your actual code (unchanged)
+└── ai-agents/              # AI context areas (NEW - separate from code)
+    ├── frontend/
+    │   ├── AI-CONTEXT.md   # AI context about your frontend
+    │   └── docs/KNOWLEDGE.md
+    └── AI-PROJECT-OVERVIEW.md
+```
 
 ## Next Steps
 
 ### After Your First Success
-1. **Add more context** to your AI-README.md based on what was helpful
+1. **Add more context** to your AI-CONTEXT.md based on what was helpful
 2. **Try a different type of problem** to see how versatile the approach is
 3. **Share your results** with the community to help improve the templates
 
-### Expanding to More Workspaces
-1. **Set up a second workspace** if you're regularly working across multiple layers
-2. **Create META-AI-README.md** when you need coordination between workspaces
+### Expanding to More AI Context Areas
+1. **Set up a second context area** if you're regularly working across multiple layers
+2. **Create AI-PROJECT-OVERVIEW.md** when you need coordination between areas
 3. **Adapt the templates** to better fit your specific project structure
 
 ### Building Team Habits
-1. **Show teammates** how the workspace approach helps with AI assistance
+1. **Show teammates** how the AI context approach helps with AI assistance
 2. **Share KNOWLEDGE.md discoveries** so everyone benefits from solutions
-3. **Develop team conventions** for workspace organization and documentation
+3. **Develop team conventions** for AI context organization and documentation
 
 ## Troubleshooting
 
-### AI Assistant Isn't Reading the AI-README.md
+### AI Assistant Isn't Reading the AI-CONTEXT.md
 Try being more explicit:
 ```
-Before helping me, please read the AI-README.md file in this workspace to understand our project setup. Then help me with [your problem].
+Before helping me, please read the ai-agents/frontend/AI-CONTEXT.md file to understand our project setup. Then help me with [your problem].
 ```
 
-### AI-README.md Feels Too Complex
+### AI-CONTEXT.md Feels Too Complex
 Start with just the basics:
 - What framework/language you're using
 - One or two common problems you face
@@ -226,13 +241,30 @@ Start with just the basics:
 ### Not Sure if It's Working
 Compare these two approaches and see which gets better results:
 
-**Without workspace context:**
+**Without AI context:**
 "My React app is slow on mobile, how do I fix it?"
 
-**With workspace context:**
-"I'm working in client-workspace. Read the AI-README.md to understand our React setup. Our dashboard takes 7 seconds to load on mobile (currently loads in under 2 seconds on desktop). Help me identify and fix the main performance bottleneck."
+**With AI context:**
+"I'm working with the frontend of our application. Read the ai-agents/frontend/AI-CONTEXT.md to understand our React setup. Our dashboard takes 7 seconds to load on mobile (currently loads in under 2 seconds on desktop). Help me identify and fix the main performance bottleneck."
 
 The second approach should get much more specific, actionable advice.
+
+## Key Reminders
+
+### These Are AI-Only Areas
+- The `ai-agents/` folders are SEPARATE from your actual code
+- Your normal project structure (src/, components/, etc.) stays exactly the same
+- These exist solely to give AI assistants context about your project
+
+### Focus on Real Problems
+- Don't try to set up perfect organization
+- Start with one actual issue you're facing
+- Build up the AI context areas gradually as you use them
+
+### Build Knowledge Over Time
+- Document solutions in KNOWLEDGE.md files
+- Each conversation builds on previous knowledge
+- Share discoveries with your team and the community
 
 ---
 

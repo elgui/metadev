@@ -10,35 +10,39 @@ This example shows how the AI workspace strategy works for a real project - a to
 
 **Team**: 2 developers working part-time
 
-## Workspace Setup
+## AI Agent Context Setup
 
 ```
 todo-app/
-├── META-AI-README.md                 # Project coordination
-├── client-workspace/                 # React frontend
-│   ├── AI-README.md                 # Frontend context for AI
-│   ├── docs/KNOWLEDGE.md            # Frontend discoveries
-│   └── tools/performance-check.js   # Simple performance monitoring
-├── admin-workspace/                  # Admin panel
-│   ├── AI-README.md                 # Admin context for AI
-│   ├── docs/KNOWLEDGE.md            # Admin discoveries
-│   └── tools/user-analytics.js      # User behavior tracking
-└── backend-workspace/                # Django API
-    ├── AI-README.md                 # Backend context for AI
-    ├── docs/KNOWLEDGE.md            # Backend discoveries
-    └── tools/api-monitor.py          # API performance monitoring
+├── src/                              # Actual React code (unchanged)
+├── api/                              # Actual Django code (unchanged)
+├── components/                       # Actual components (unchanged)
+└── ai-agents/                        # AI context areas (NEW)
+    ├── AI-PROJECT-OVERVIEW.md        # Project coordination for AI
+    ├── frontend/                     # Frontend AI context
+    │   ├── AI-CONTEXT.md            # Frontend context for AI
+    │   ├── docs/KNOWLEDGE.md        # Frontend discoveries
+    │   └── tools/performance-check.js # Simple performance monitoring
+    ├── admin/                        # Admin panel AI context
+    │   ├── AI-CONTEXT.md            # Admin context for AI
+    │   ├── docs/KNOWLEDGE.md        # Admin discoveries
+    │   └── tools/user-analytics.js   # User behavior tracking
+    └── backend/                      # Backend AI context
+        ├── AI-CONTEXT.md            # Backend context for AI
+        ├── docs/KNOWLEDGE.md        # Backend discoveries
+        └── tools/api-monitor.py      # API performance monitoring
 ```
 
 ## Real Problems Solved Using This Approach
 
 ### Problem 1: Real-time Updates Not Working on Mobile
 
-**Workspace**: client-workspace  
+**AI Context Area**: ai-agents/frontend/  
 **Original Issue**: Users on mobile Safari weren't seeing real-time todo updates
 
 **AI Conversation**:
 ```
-I'm working in client-workspace. Please read the AI-README.md file to understand our React setup.
+I'm working with the frontend of our application. Please read the ai-agents/frontend/AI-CONTEXT.md file to understand our React setup.
 
 PROBLEM: WebSocket connections are dropping on mobile Safari after a few minutes. 
 Users add todos but other team members on mobile don't see the updates.
@@ -68,16 +72,16 @@ Start by exploring our workspace files to understand our current WebSocket setup
 - Added automatic reconnection with exponential backoff
 - Created offline queue for actions during disconnection
 
-**Result**: Mobile users now maintain reliable real-time connections. Solution documented in client-workspace/docs/KNOWLEDGE.md for future reference.
+**Result**: Mobile users now maintain reliable real-time connections. Solution documented in ai-agents/frontend/docs/KNOWLEDGE.md for future reference.
 
 ### Problem 2: Database Slowdown with Large Todo Lists
 
-**Workspace**: backend-workspace  
+**AI Context Area**: ai-agents/backend/  
 **Original Issue**: Users with 500+ todos were experiencing 3-5 second load times
 
 **AI Conversation**:
 ```
-I'm working in backend-workspace. Please read the AI-README.md to understand our Django setup.
+I'm working with the backend of our application. Please read the ai-agents/backend/AI-CONTEXT.md to understand our Django setup.
 
 PERFORMANCE ISSUE: Todo list loading is very slow for users with lots of todos
 
@@ -111,16 +115,16 @@ Start by understanding our current database monitoring setup from the workspace 
 - Implemented database indexes on frequently queried fields
 - Added pagination for lists over 200 items
 
-**Result**: Load times improved from 3-5 seconds to under 400ms. Database optimization patterns documented in backend-workspace/docs/KNOWLEDGE.md.
+**Result**: Load times improved from 3-5 seconds to under 400ms. Database optimization patterns documented in ai-agents/backend/docs/KNOWLEDGE.md.
 
 ### Problem 3: Admin Panel Memory Issues
 
-**Workspace**: admin-workspace  
+**AI Context Area**: ai-agents/admin/  
 **Original Issue**: Admin panel crashed when viewing user analytics for large datasets
 
 **AI Conversation**:
 ```
-I'm working in admin-workspace. Please read the AI-README.md to understand our admin setup.
+I'm working with the admin panel of our application. Please read the ai-agents/admin/AI-CONTEXT.md to understand our admin setup.
 
 PERFORMANCE ISSUE: Admin analytics page crashes browser when loading user data
 
@@ -155,56 +159,56 @@ Start by reviewing our workspace setup and current admin implementation.
 - Added data sampling for charts (show trends, not every point)
 - Created progressive loading with loading indicators
 
-**Result**: Admin panel now handles 10,000+ users without crashing. Chart rendering optimizations documented in admin-workspace/docs/KNOWLEDGE.md.
+**Result**: Admin panel now handles 10,000+ users without crashing. Chart rendering optimizations documented in ai-agents/admin/docs/KNOWLEDGE.md.
 
 ## Key Patterns Discovered
 
-### Cross-Workspace Coordination
+### Cross-Area Coordination
 
 **Pattern**: When fixing the WebSocket issues, we discovered the backend needed to handle connection drops more gracefully too.
 
 **Coordination Used**:
-1. Frontend team documented the mobile Safari behavior in META-AI-README.md
+1. Frontend team documented the mobile Safari behavior in ai-agents/AI-PROJECT-OVERVIEW.md
 2. Backend team implemented better connection cleanup
 3. Both teams tested the complete flow together
-4. Both KNOWLEDGE.md files were updated with the full solution
+4. Both AI context area KNOWLEDGE.md files were updated with the full solution
 
 ### Reusable Solutions
 
-**Performance Monitoring**: The simple performance monitoring script created for the frontend proved useful for the admin panel too. It was adapted and shared between workspaces.
+**Performance Monitoring**: The simple performance monitoring script created for the frontend AI context proved useful for the admin panel too. It was adapted and shared between AI context areas.
 
-**Database Optimization**: The query optimization techniques from the backend workspace helped solve similar issues in the admin panel's user analytics.
+**Database Optimization**: The query optimization techniques from the backend AI context helped solve similar issues in the admin panel's user analytics.
 
 ## Lessons Learned
 
 ### What Worked Well
 
-1. **Focused Context**: AI assistants understood each workspace's specific setup and constraints
-2. **Incremental Progress**: Each workspace could make progress independently while staying coordinated
+1. **Focused Context**: AI assistants understood each AI context area's specific setup and constraints
+2. **Incremental Progress**: Each area could make progress independently while staying coordinated
 3. **Knowledge Building**: Solutions to similar problems got faster over time
-4. **Cross-pollination**: Optimizations in one workspace often helped others
+4. **Cross-pollination**: Optimizations in one AI context area often helped others
 
 ### What Could Be Improved
 
-1. **Testing Coordination**: Need better process for testing changes that span workspaces
-2. **Documentation Sync**: Sometimes KNOWLEDGE.md files got out of sync between workspaces
+1. **Testing Coordination**: Need better process for testing changes that span AI context areas
+2. **Documentation Sync**: Sometimes KNOWLEDGE.md files got out of sync between areas
 3. **Tool Sharing**: Could create more shared tools and utilities
 
 ### Metrics
 
-**Before AI Workspaces**:
+**Before AI Context Areas**:
 - Average debugging session: 2-3 hours
 - Context switching time: 15-20 minutes to understand unfamiliar code
 - Knowledge retention: Limited, mostly in developers' heads
 
-**After AI Workspaces**:
+**After AI Context Areas**:
 - Average debugging session: 30-45 minutes
-- Context switching time: 5 minutes to read workspace AI-README
+- Context switching time: 5 minutes to read AI context files
 - Knowledge retention: Documented and searchable in KNOWLEDGE.md files
 
 ## File Examples
 
-### client-workspace/docs/KNOWLEDGE.md (excerpt)
+### ai-agents/frontend/docs/KNOWLEDGE.md (excerpt)
 ```markdown
 ## Mobile WebSocket Reliability
 **Date**: 2024-03-15
@@ -222,7 +226,7 @@ setInterval(() => {
 **Reusability**: Same pattern works for any real-time WebSocket feature
 ```
 
-### backend-workspace/docs/KNOWLEDGE.md (excerpt)
+### ai-agents/backend/docs/KNOWLEDGE.md (excerpt)
 ```markdown
 ## Django ORM N+1 Query Optimization
 **Date**: 2024-03-12
@@ -240,4 +244,4 @@ todos = Todo.objects.filter(list_id=list_id).select_related('user', 'assigned_to
 **Reusability**: Apply select_related() to any model with foreign key relationships
 ```
 
-This example shows how the workspace approach helps teams build up institutional knowledge while giving AI assistants the context they need to provide genuinely helpful assistance.
+This example shows how the AI context area approach helps teams build up institutional knowledge while giving AI assistants the context they need to provide genuinely helpful assistance.

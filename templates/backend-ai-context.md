@@ -1,8 +1,8 @@
-# Backend Workspace Guide (backend-workspace)
+# Backend AI Context (ai-agents/backend/)
 
-## What This Workspace Is For
+**Purpose**: This file gives AI assistants context about your backend/server-side code. Save this as `ai-agents/backend/AI-CONTEXT.md` in your project.
 
-This workspace helps AI assistants understand your **backend/server-side code** - the APIs, database operations, and server logic that power your application.
+**Important**: This is SEPARATE from your actual code. Your normal backend folders stay exactly where they are. This exists solely to help AI assistants understand your backend setup.
 
 ## Your Project Setup
 
@@ -24,7 +24,9 @@ This workspace helps AI assistants understand your **backend/server-side code** 
 - **Database queries**: Under 50ms average
 - **Uptime**: 99.9% availability
 
-## Project Structure
+## Your Actual Code Structure
+
+**Note**: This describes your existing backend structure to help AI understand your project. Don't reorganize your actual code.
 
 ```
 app/
@@ -81,15 +83,15 @@ app/
 
 ## How to Help Me Effectively
 
-### When Asking for Help
+### When You're Helping with Backend Issues
 1. **Read this file first** so you understand our backend setup
 2. **Include specific error messages** - exact text from logs or error responses
 3. **Describe the conditions** - when does this happen, how often, which users
-4. **Show what you've investigated** - what logs you checked, what you tested
+4. **Show what I've investigated** - what logs I checked, what I tested
 
-### Example of a Good Request
+### Example of a Good Request to You
 ```
-I'm working on our Django API user registration endpoint.
+I'm working with the backend of our application. I've read the AI context - you know we use Django with PostgreSQL.
 
 PROBLEM: When multiple users try to create accounts at the same time, 
 some get "IntegrityError: duplicate key value violates unique constraint" 
@@ -113,7 +115,7 @@ WHAT SUCCESS LOOKS LIKE:
 - Existing single-user registration still works perfectly
 ```
 
-## Workspace Files
+## AI Context Files in This Area
 
 ### docs/KNOWLEDGE.md
 Where we document:
@@ -144,7 +146,7 @@ Where we document:
 - Are there specific conditions that trigger the problem?
 
 ### 2. Check Our Knowledge Base
-- Look in `docs/KNOWLEDGE.md` for similar issues
+- Look in `docs/KNOWLEDGE.md` for similar backend issues
 - Check if we've optimized similar functionality before
 - See what database patterns have worked well
 - Review any security or performance lessons
@@ -162,7 +164,7 @@ Where we document:
 - Load test if it's a performance issue
 
 ### 5. Document the Solution
-- Update `docs/KNOWLEDGE.md` with what you learned
+- Update `docs/KNOWLEDGE.md` with what was learned
 - Include the problem, investigation process, and solution
 - Note any patterns that could apply to future work
 
@@ -202,7 +204,7 @@ print(connection.queries)
 curl -o /dev/null -s -w "Total time: %{time_total}s\n" http://localhost:8000/api/users/
 ```
 
-## Common Database Optimizations
+## Common Backend Optimizations
 
 ### Query Optimization
 ```python
@@ -280,10 +282,10 @@ class StandardResultsSetPagination(PageNumberPagination):
     max_page_size = 100
 ```
 
-## Integration with Other Workspaces
+## Integration with Other AI Context Areas
 
 ### When Frontend Needs API Changes
-Document the change clearly:
+Document the change clearly in AI-PROJECT-OVERVIEW.md:
 ```markdown
 ## API Update: [Endpoint Name]
 **Change**: [What's being modified]
@@ -293,7 +295,7 @@ Document the change clearly:
 **Timeline**: [When this will be deployed]
 ```
 
-### When Admin Needs New Data Access
+### When Admin Context Area Needs New Data Access
 Consider admin-specific endpoints:
 ```markdown
 ## Admin API: [Feature Name]
@@ -323,6 +325,25 @@ Consider admin-specific endpoints:
 - Implement proper CORS policies
 - Handle user data according to privacy regulations
 
+## Important Reminders
+
+### This is AI Context Only
+- This file exists to help AI assistants understand your backend
+- Your actual code stays in your normal project structure
+- Don't move your models, views, or other code here
+- This `ai-agents/backend/` folder is separate from your development work
+
+### Focus on Real Problems
+- Include your actual issues, not hypothetical ones
+- Update this file based on what actually helps with AI assistance
+- Document real solutions that worked in your KNOWLEDGE.md
+
+### Keep It Current
+- Update this file when your tech stack changes
+- Add new common problems as they emerge
+- Remove outdated information that no longer applies
+- Keep examples relevant to your current setup
+
 ---
 
-**Remember**: This workspace is about making the server-side functionality reliable, fast, and secure. Focus on data integrity, performance, and security. Every API endpoint should handle both expected and unexpected inputs gracefully.
+**Remember**: This AI context area is about making your interactions with AI assistants more effective. Focus on providing the context that helps AI understand your specific backend setup and constraints.

@@ -1,9 +1,13 @@
-# Project Overview (META-AI-README)
+# AI Project Overview (ai-agents/)
+
+**Purpose**: This file helps AI assistants understand how all parts of your project connect. Save this as `ai-agents/AI-PROJECT-OVERVIEW.md` in your project.
+
+**Important**: This is for AI agent coordination only. Your actual code stays in its normal project structure. This exists solely to help AI assistants understand your overall project when working across multiple areas.
 
 ## Project: [Your Project Name]
 
 **Type**: [Web app / API / Dashboard / etc.]  
-**Architecture**: Client + Admin + Backend  
+**Architecture**: Frontend + Admin + Backend  
 **Current Focus**: [What you're primarily working on right now]
 
 ## Quick Project Summary
@@ -13,21 +17,21 @@
 **Current status**: [Development / Testing / Production / etc.]  
 **Team size**: [Solo / 2-3 people / larger team]
 
-## Workspace Status
+## AI Context Areas Status
 
-### 🎨 Frontend (client-workspace/)
+### 🎨 Frontend (ai-agents/frontend/)
 - **Technology**: [React 18, Vue 3, Angular, etc.]
 - **Current work**: [What's being built or fixed]
 - **Status**: [Working well / Has issues / Under development]
 - **Performance**: [Page load times, any known issues]
 
-### 🎛️ Admin Panel (admin-workspace/)
+### 🎛️ Admin Panel (ai-agents/admin/)
 - **Technology**: [Admin framework or custom-built]
 - **Current work**: [What admin features are being built/fixed]
 - **Status**: [Working well / Has issues / Under development]  
 - **Usage**: [How often admins use it, any pain points]
 
-### ⚙️ Backend (backend-workspace/)
+### ⚙️ Backend (ai-agents/backend/)
 - **Technology**: [Django + PostgreSQL, FastAPI + MongoDB, etc.]
 - **Current work**: [What APIs or features are being built/fixed]
 - **Status**: [Working well / Has issues / Under development]
@@ -36,29 +40,29 @@
 ## How Everything Connects
 
 ### Main Data Flow
-1. **Users interact with**: Frontend (client-workspace)
-2. **Frontend talks to**: Backend APIs (backend-workspace)
-3. **Admins manage via**: Admin panel (admin-workspace)
+1. **Users interact with**: Frontend (ai-agents/frontend/)
+2. **Frontend talks to**: Backend APIs (ai-agents/backend/)
+3. **Admins manage via**: Admin panel (ai-agents/admin/)
 4. **Admin panel also uses**: Backend APIs
 
 ### Shared Systems
-- **Database**: [PostgreSQL, MySQL, etc.] - managed by backend-workspace
-- **Authentication**: [How users and admins log in] - managed by backend-workspace
-- **File storage**: [Where images/files are stored] - managed by backend-workspace
-- **External services**: [Payment, email, etc.] - integrated in backend-workspace
+- **Database**: [PostgreSQL, MySQL, etc.] - managed by backend
+- **Authentication**: [How users and admins log in] - managed by backend
+- **File storage**: [Where images/files are stored] - managed by backend
+- **External services**: [Payment, email, etc.] - integrated in backend
 
 ## Current Focus Areas
 
 ### High Priority
 1. **[Task/Feature Name]**
    - **What**: [Brief description]
-   - **Workspace**: [Which workspace is handling this]
+   - **AI Context Area**: [Which area is handling this]
    - **Why urgent**: [Business reason or user impact]
    - **Due**: [Timeline if any]
 
 2. **[Task/Feature Name]**
    - **What**: [Brief description]
-   - **Workspace**: [Which workspace is handling this]
+   - **AI Context Area**: [Which area is handling this]
    - **Why urgent**: [Business reason or user impact]
    - **Due**: [Timeline if any]
 
@@ -77,11 +81,11 @@
 
 ### Known Issues
 - [List any current performance problems]
-- [Note which workspace owns each issue]
+- [Note which AI context area owns each issue]
 
-## When Workspaces Need to Coordinate
+## When AI Context Areas Need to Coordinate
 
-### Changes That Affect Multiple Workspaces
+### Changes That Affect Multiple Areas
 
 **Frontend + Backend coordination needed when**:
 - Adding new API endpoints
@@ -100,15 +104,15 @@
 - Consistent styling or user experience
 - Similar functionality in both interfaces
 
-### How to Request Help from Another Workspace
+### How to Request Help from Another AI Context Area
 
 **Template for coordination requests**:
 
 ```markdown
-## Cross-Workspace Request: [Brief Description]
+## Cross-Area Request: [Brief Description]
 
-**From**: [Your workspace]
-**To**: [Which workspace you need help from]  
+**From**: [Your AI context area]
+**To**: [Which area you need help from]  
 **What you need**: [Specific request]
 **Why**: [What you're trying to build/fix]
 **Timeline**: [When you need this]
@@ -139,24 +143,24 @@
 ## Development Workflow
 
 ### For New Features
-1. **Plan**: Decide which workspace(s) are involved
+1. **Plan**: Decide which AI context area(s) are involved
 2. **Design**: Figure out the user experience and technical approach
-3. **Coordinate**: If multiple workspaces, plan the integration
-4. **Build**: Implement in the appropriate workspace(s)
+3. **Coordinate**: If multiple areas, plan the integration
+4. **Build**: Implement in the appropriate area(s)
 5. **Test**: Verify everything works together
 6. **Deploy**: Release to users
 
 ### For Bug Fixes
-1. **Identify**: Which workspace owns the problematic code
-2. **Investigate**: Use the workspace's tools and knowledge base
-3. **Fix**: Implement solution in the appropriate workspace
+1. **Identify**: Which AI context area owns the problematic code
+2. **Investigate**: Use the area's tools and knowledge base
+3. **Fix**: Implement solution in the appropriate area
 4. **Validate**: Ensure fix works and doesn't break anything else
-5. **Document**: Update the workspace's KNOWLEDGE.md
+5. **Document**: Update the area's KNOWLEDGE.md
 
 ### For Performance Issues
 1. **Measure**: Get concrete numbers about the slowness
-2. **Locate**: Identify which workspace/layer is the bottleneck
-3. **Optimize**: Apply performance improvements in that workspace
+2. **Locate**: Identify which area/layer is the bottleneck
+3. **Optimize**: Apply performance improvements in that area
 4. **Verify**: Confirm measurable improvement
 5. **Monitor**: Keep an eye on performance going forward
 
@@ -165,13 +169,13 @@
 ### Start Development Environment
 ```bash
 # Frontend
-cd client-workspace && npm start
+cd [your-project] && npm start
 
 # Backend  
-cd backend-workspace && python manage.py runserver  # or equivalent
+cd [your-project] && python manage.py runserver  # or equivalent
 
 # Admin (if separate)
-cd admin-workspace && npm start  # or equivalent
+cd [your-project] && [admin start command]
 ```
 
 ### Check System Health
@@ -180,21 +184,21 @@ cd admin-workspace && npm start  # or equivalent
 curl http://localhost:8000/api/health/
 
 # Check frontend builds
-cd client-workspace && npm run build
+cd [your-project] && npm run build
 
 # Run tests
-cd backend-workspace && python manage.py test
+cd [your-project] && [test command]
 ```
 
 ## Knowledge Sharing
 
 ### Key Patterns We've Learned
-1. **[Pattern Name]**: [Brief description] - discovered in [workspace]
-2. **[Pattern Name]**: [Brief description] - discovered in [workspace]
+1. **[Pattern Name]**: [Brief description] - discovered in [AI context area]
+2. **[Pattern Name]**: [Brief description] - discovered in [AI context area]
 
 ### Reusable Solutions
-1. **[Solution Name]**: [What it solves] - from [workspace], can be used in [other workspaces]
-2. **[Solution Name]**: [What it solves] - from [workspace], can be used in [other workspaces]
+1. **[Solution Name]**: [What it solves] - from [area], can be used in [other areas]
+2. **[Solution Name]**: [What it solves] - from [area], can be used in [other areas]
 
 ### Things to Avoid
 1. **[Anti-pattern]**: [Why it causes problems] - learned from [experience]
@@ -202,21 +206,39 @@ cd backend-workspace && python manage.py test
 
 ## Getting Help
 
-### When You Need Cross-Workspace Help
+### When You Need Cross-Area Help
 1. **Update this file** with your coordination request
 2. **Be specific** about what you need and when
 3. **Provide context** about what you're trying to accomplish
-4. **Include success criteria** so the other workspace knows when they're done
+4. **Include success criteria** so the other area knows when they're done
 
 ### When Working Solo
-- Use the individual workspace AI-README files to give AI assistants proper context
-- Document discoveries in the workspace KNOWLEDGE.md files
-- Update this file when you complete major work that affects multiple workspaces
+- Use the individual AI context files to give AI assistants proper context
+- Document discoveries in the area KNOWLEDGE.md files
+- Update this file when you complete major work that affects multiple areas
 
 ### When Working with a Team
 - Use this file to coordinate who's working on what
-- Update workspace status when you start/finish major work
-- Share patterns and solutions across workspaces
+- Update area status when you start/finish major work
+- Share patterns and solutions across areas
+
+## Important Reminders
+
+### This is AI Coordination Only
+- This file exists to help AI assistants understand your overall project
+- Your actual code stays in its normal project structure
+- The ai-agents/ folders are separate from your development work
+- This is for AI context and coordination, not project management
+
+### Focus on Real Information
+- Include your actual project details, not template examples
+- Update this file based on what actually helps with AI assistance
+- Keep information current as your project evolves
+
+### Keep It Simple
+- Don't overcomplicate the coordination
+- Focus on information that helps AI assistants work across areas
+- Update when there are real changes that affect multiple areas
 
 ---
 
@@ -224,4 +246,4 @@ cd backend-workspace && python manage.py test
 **Next Review**: [When you plan to update this file]  
 **Overall Status**: [Green: everything good / Yellow: some issues / Red: major problems]
 
-**Remember**: This file helps coordinate work across different parts of your project. Keep it updated so AI assistants and team members understand how everything fits together.
+**Remember**: This file helps AI assistants understand how different parts of your project connect when you need help that spans multiple areas (frontend + backend, admin + backend, etc.).

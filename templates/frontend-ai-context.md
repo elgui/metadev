@@ -1,8 +1,8 @@
-# Frontend Workspace Guide (client-workspace)
+# Frontend AI Context (ai-agents/frontend/)
 
-## What This Workspace Is For
+**Purpose**: This file gives AI assistants context about your frontend/client-side code. Save this as `ai-agents/frontend/AI-CONTEXT.md` in your project.
 
-This workspace helps AI assistants understand your **frontend/client-side code** - the React, Vue, Angular, or vanilla JavaScript that users interact with in their browsers.
+**Important**: This is SEPARATE from your actual code. Your normal `src/`, `components/`, etc. folders stay exactly where they are. This exists solely to help AI assistants understand your frontend setup.
 
 ## Your Project Setup
 
@@ -21,7 +21,9 @@ This workspace helps AI assistants understand your **frontend/client-side code**
 - **JavaScript bundle**: Under 200KB gzipped
 - **Core Web Vitals**: All green in PageSpeed Insights
 
-## Project Structure
+## Your Actual Code Structure
+
+**Note**: This describes your existing code structure to help AI understand your project. Don't reorganize your actual code.
 
 ```
 src/
@@ -73,15 +75,15 @@ src/
 
 ## How to Help Me Effectively
 
-### When Asking for Help
+### When You're Helping with Frontend Issues
 1. **Read this file first** so you understand our frontend setup
 2. **Be specific about the problem** - which browsers, which users, what exactly happens
-3. **Include what you've already tried** - saves time and shows what doesn't work
+3. **Include what I've already tried** - saves time and shows what doesn't work
 4. **Describe what success looks like** - how we'll know when it's fixed
 
-### Example of a Good Request
+### Example of a Good Request to You
 ```
-I'm working on the user profile page in our React app. 
+I'm working with the frontend of our application. I've read the AI context - you know we use React 18 with TypeScript and Vite.
 
 PROBLEM: When users try to upload a profile picture on mobile Safari, 
 the file picker opens but after selecting a photo, nothing happens. 
@@ -99,7 +101,7 @@ WHAT SUCCESS LOOKS LIKE:
 - No change to desktop functionality
 ```
 
-## Workspace Files
+## AI Context Files in This Area
 
 ### docs/KNOWLEDGE.md
 Where we document:
@@ -133,9 +135,9 @@ Where we document:
 
 ### 3. Plan the Approach
 - What's the smallest change that could fix this?
-- How will you test the fix?
+- How will we test the fix?
 - What could this change break?
-- How will you measure success?
+- How will we measure success?
 
 ### 4. Implement and Validate
 - Make the change
@@ -144,7 +146,7 @@ Where we document:
 - Measure the improvement if it's performance-related
 
 ### 5. Document the Solution
-- Update `docs/KNOWLEDGE.md` with what you learned
+- Update `docs/KNOWLEDGE.md` with what was learned
 - Include the problem, solution, and why it worked
 - Note any patterns that could apply to future issues
 
@@ -166,7 +168,7 @@ npm run build && npx bundlesize
 # Analyze what's in the bundle
 npx webpack-bundle-analyzer build/static/js/*.js
 
-# Test on different devices (if using browser dev tools)
+# Test on different devices (using browser dev tools)
 # 1. Open Chrome DevTools
 # 2. Click device icon (mobile view)
 # 3. Test on different screen sizes
@@ -181,10 +183,10 @@ npx lighthouse http://localhost:3000 --view
 # Use PageSpeed Insights: https://pagespeed.web.dev/
 ```
 
-## Integration with Other Workspaces
+## Integration with Other AI Context Areas
 
 ### When You Need Backend Changes
-Create an issue in the META-AI-README.md:
+Create an issue in the AI-PROJECT-OVERVIEW.md:
 ```markdown
 ## Frontend Request: [Brief Description]
 **Need**: [What the backend needs to provide]
@@ -193,7 +195,7 @@ Create an issue in the META-AI-README.md:
 **Timeline**: [When you need this to continue frontend work]
 ```
 
-### When Admin Workspace Could Use Your Work
+### When Admin Context Area Could Use Your Work
 Document reusable components:
 ```markdown
 ## Shareable Component: [Component Name]
@@ -203,6 +205,25 @@ Document reusable components:
 **Good for**: [What admin use cases this helps]
 ```
 
+## Important Reminders
+
+### This is AI Context Only
+- This file exists to help AI assistants understand your frontend
+- Your actual code stays in your normal project structure
+- Don't move your components, pages, or other code here
+- This `ai-agents/frontend/` folder is separate from your development work
+
+### Focus on Real Problems
+- Include your actual issues, not hypothetical ones
+- Update this file based on what actually helps with AI assistance
+- Document real solutions that worked in your KNOWLEDGE.md
+
+### Keep It Current
+- Update this file when your tech stack changes
+- Add new common problems as they emerge
+- Remove outdated information that no longer applies
+- Keep examples relevant to your current setup
+
 ---
 
-**Remember**: This workspace is about making the user-facing parts of the application work well. Focus on user experience, performance, and reliability. Every change should make the app better for actual users.
+**Remember**: This AI context area is about making your interactions with AI assistants more effective. Focus on providing the context that helps AI understand your specific frontend setup and constraints.

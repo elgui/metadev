@@ -1,4 +1,4 @@
-# AI-First Development: Practical Workspace Strategy
+# AI-First Development: AI Agent Context Strategy
 
 > Give your AI coding assistant the context and tools it actually needs to help you effectively.
 
@@ -6,28 +6,34 @@
 
 When you ask an AI assistant to help with code, it often feels like talking to someone with their eyes closed. They suggest changes, you copy-paste, something breaks, you paste the error back, they suggest another blind fix. You end up being a messenger between an AI that can't see your system and a codebase it doesn't understand.
 
-## A Simple Solution: Organized AI Workspaces
+## A Simple Solution: AI Agent Context Areas
 
-Instead of dumping your entire project on an AI and hoping for the best, create **focused workspaces** where AI can actually understand what's happening:
+Instead of dumping your entire project on an AI and hoping for the best, create **focused AI context areas** where AI agents can actually understand what's happening:
 
 ```
 📁 your-project/
-├── 📁 client-workspace/           # Frontend AI context
-│   ├── AI-README.md              # "Here's what you need to know about our frontend"
-│   ├── tools/                    # Simple monitoring scripts
-│   └── docs/KNOWLEDGE.md         # "Here's what we've learned"
-├── 📁 admin-workspace/           # Admin panel AI context
-│   ├── AI-README.md              # "Here's our admin setup"
-│   ├── tools/                    # Dashboard monitoring
-│   └── docs/KNOWLEDGE.md         # Admin-specific discoveries
-├── 📁 backend-workspace/         # API AI context
-│   ├── AI-README.md              # "Here's our server setup"
-│   ├── tools/                    # API monitoring scripts
-│   └── docs/KNOWLEDGE.md         # Backend optimizations
-└── META-AI-README.md             # "Here's how everything connects"
+├── 📁 src/                        # Your actual code (unchanged)
+├── 📁 components/                 # Your actual code (unchanged)  
+├── 📁 api/                        # Your actual code (unchanged)
+└── 📁 ai-agents/                  # AI agent context areas (NEW)
+    ├── 📁 frontend/               # Frontend AI agent context
+    │   ├── AI-CONTEXT.md         # "Here's what you need to know about our frontend"
+    │   ├── tools/                # Simple monitoring scripts
+    │   └── docs/KNOWLEDGE.md     # "Here's what we've learned"
+    ├── 📁 admin/                 # Admin panel AI agent context
+    │   ├── AI-CONTEXT.md         # "Here's our admin setup"
+    │   ├── tools/                # Dashboard monitoring
+    │   └── docs/KNOWLEDGE.md     # Admin-specific discoveries
+    ├── 📁 backend/               # API AI agent context
+    │   ├── AI-CONTEXT.md         # "Here's our server setup"
+    │   ├── tools/                # API monitoring scripts
+    │   └── docs/KNOWLEDGE.md     # Backend optimizations
+    └── AI-PROJECT-OVERVIEW.md   # "Here's how everything connects"
 ```
 
-Each workspace gives your AI assistant:
+**Key Point**: These `ai-agents/` folders are **SEPARATE** from your actual code. They exist solely to give AI assistants context about your project.
+
+Each AI context area gives your AI assistant:
 - **Context** about that specific part of your system
 - **Tools** to monitor what's actually happening
 - **Memory** that persists between conversations
@@ -35,13 +41,13 @@ Each workspace gives your AI assistant:
 
 ## Why This Works
 
-### Without Workspaces
+### Without AI Context Areas
 - AI makes educated guesses about your system
 - You manually explain the same context repeatedly
 - Fixes often break other things you forgot to mention
 - Knowledge is lost when the conversation ends
 
-### With Workspaces
+### With AI Context Areas
 - AI has written context about your specific setup
 - Simple monitoring tools show what's actually happening
 - Knowledge builds up over time in KNOWLEDGE.md files
@@ -52,29 +58,28 @@ Each workspace gives your AI assistant:
 ### 1. Choose One Problem Area
 Don't try to set up everything at once. Pick your biggest pain point:
 
-- **Frontend issues?** → Start with `client-workspace/`
-- **API problems?** → Start with `backend-workspace/`  
-- **Admin panel headaches?** → Start with `admin-workspace/`
+- **Frontend issues?** → Start with `ai-agents/frontend/`
+- **API problems?** → Start with `ai-agents/backend/`  
+- **Admin panel headaches?** → Start with `ai-agents/admin/`
 
-### 2. Copy the Right Template
+### 2. Create AI Agent Context Area
 
 ```bash
-# Create your workspace
-mkdir client-workspace
-cd client-workspace
+# Create AI agent context structure (separate from your code)
+mkdir -p ai-agents/frontend/tools ai-agents/frontend/docs ai-agents/frontend/tests ai-agents/frontend/logs
+cd ai-agents/frontend
 
-# Copy the template that matches your setup
-curl -O https://raw.githubusercontent.com/yourusername/metadev/main/templates/client-ai-readme.md
-mv client-ai-readme.md AI-README.md
+# Copy the AI context template that matches your setup
+curl -O https://raw.githubusercontent.com/yourusername/metadev/main/templates/frontend-ai-context.md
+mv frontend-ai-context.md AI-CONTEXT.md
 
 # Create basic structure
-mkdir tools docs tests logs
 touch docs/KNOWLEDGE.md
 ```
 
 ### 3. Customize for Your Project
 
-Edit `AI-README.md` to describe YOUR specific setup:
+Edit `AI-CONTEXT.md` to describe YOUR specific setup:
 - What framework you're using (React, Vue, Django, etc.)
 - What your main user flows are
 - What problems you're trying to solve
@@ -85,20 +90,54 @@ Edit `AI-README.md` to describe YOUR specific setup:
 Instead of saying "fix my login form", try:
 
 ```
-I'm working in the client-workspace. Read the AI-README.md file to understand our frontend setup.
+I'm working with the frontend of our application. Read the ai-agents/frontend/AI-CONTEXT.md file to understand our setup.
 
 The issue: Users report that the login form hangs on mobile Safari.
 
 What I need: Help me identify why this is happening and implement a fix.
 
-Please start by understanding our current setup from the workspace files, then help me debug this systematically.
+Please start by understanding our current setup from the AI context files, then help me debug this systematically.
+```
+
+## AI Agent Context Templates
+
+### 🎨 Frontend AI Context (ai-agents/frontend/)
+```
+AI-CONTEXT.md           # React/Vue/Angular setup and common issues
+tools/                  # Performance monitoring, bundle analysis
+docs/KNOWLEDGE.md       # Frontend discoveries and solutions
+tests/                  # UI testing and validation scripts
+logs/                   # Performance and error tracking
+```
+
+### ⚙️ Backend AI Context (ai-agents/backend/)
+```
+AI-CONTEXT.md           # API/database setup and common issues  
+tools/                  # API health checking, database monitoring
+docs/KNOWLEDGE.md       # Backend optimizations and fixes
+tests/                  # API testing and load testing scripts
+logs/                   # Performance and error tracking
+```
+
+### 🎛️ Admin AI Context (ai-agents/admin/)
+```
+AI-CONTEXT.md           # Admin panel setup and common issues
+tools/                  # Dashboard monitoring, data analysis
+docs/KNOWLEDGE.md       # Admin workflow optimizations
+tests/                  # Admin functionality testing
+logs/                   # Usage and performance tracking
+```
+
+### 🗺️ Project Coordination (ai-agents/)
+```
+AI-PROJECT-OVERVIEW.md  # How all parts connect, current priorities
 ```
 
 ## Prompt Templates That Actually Work
 
 ### 🛠️ For Debugging Issues
 ```
-I'm working in [workspace-name]. Please read the AI-README.md to understand our setup.
+I'm working with the [frontend/backend/admin] of our application. Please read the ai-agents/[frontend/backend/admin]/AI-CONTEXT.md to understand our setup.
 
 ISSUE: [Specific problem users are experiencing]
 CONTEXT: [When it happens, how often, which users]
@@ -107,14 +146,14 @@ WHAT I'VE TRIED: [Previous attempts to fix it]
 Please help me:
 1. Understand what's actually causing this
 2. Fix it without breaking existing functionality  
-3. Update our KNOWLEDGE.md with what we learn
+3. Update our ai-agents/[area]/docs/KNOWLEDGE.md with what we learn
 
-Start by exploring the workspace files to understand our current setup.
+Start by exploring the AI context files to understand our current setup.
 ```
 
 ### ⚡ For Adding Features
 ```
-I'm working in [workspace-name]. Please read the AI-README.md for our setup context.
+I'm working with the [frontend/backend/admin] of our application. Please read the ai-agents/[frontend/backend/admin]/AI-CONTEXT.md for our setup context.
 
 GOAL: [What users should be able to do]
 WHY: [The problem this solves for users]
@@ -123,14 +162,14 @@ CONSTRAINTS: [Things that can't break, performance requirements, timeline]
 Please help me:
 1. Plan how to implement this in our current architecture
 2. Build it incrementally with testing at each step
-3. Document the approach in our KNOWLEDGE.md
+3. Document the approach in our ai-agents/[area]/docs/KNOWLEDGE.md
 
-Begin by reviewing our workspace files and existing patterns.
+Begin by reviewing our AI context files and existing patterns.
 ```
 
 ### 🔧 For Performance Issues
 ```
-I'm working in [workspace-name]. Check our AI-README.md for current setup details.
+I'm working with the [frontend/backend/admin] of our application. Check our ai-agents/[frontend/backend/admin]/AI-CONTEXT.md for current setup details.
 
 PERFORMANCE PROBLEM: [What's slow, when it happens]
 CURRENT METRICS: [Response times, load times, error rates you're seeing]
@@ -142,7 +181,7 @@ Please help me:
 3. Measure the improvement
 4. Document the technique for future use
 
-Start by understanding our monitoring setup from the workspace files.
+Start by understanding our monitoring setup from the AI context files.
 ```
 
 ## Real Examples from Practice
@@ -150,57 +189,51 @@ Start by understanding our monitoring setup from the workspace files.
 ### Frontend Debugging Success
 **Problem**: Mobile users couldn't complete checkout - form would freeze after payment button tap.
 
-**Workspace Approach**: 
-- AI read the client-workspace context about our React setup
-- Used mobile debugging tools to reproduce the issue
+**AI Agent Context Approach**: 
+- AI read the `ai-agents/frontend/AI-CONTEXT.md` about our React setup
+- Used monitoring tools to reproduce the issue
 - Identified CSS animation blocking the main thread
 - Fixed with hardware acceleration, validated on real devices
-- Documented the mobile performance pattern for future use
+- Documented the mobile performance pattern in `ai-agents/frontend/docs/KNOWLEDGE.md`
 
 **Result**: Checkout completion rate improved, and we now catch these issues earlier.
 
 ### Backend Optimization Win
 **Problem**: API responses were taking 3-5 seconds during busy periods.
 
-**Workspace Approach**:
-- AI reviewed backend-workspace context about our Django + PostgreSQL setup
+**AI Agent Context Approach**:
+- AI reviewed `ai-agents/backend/AI-CONTEXT.md` about our Django + PostgreSQL setup
 - Database monitoring tools revealed N+1 query pattern
 - Implemented proper query optimization and caching
 - Load tested the fix with realistic data
-- Updated our database optimization knowledge
+- Updated our database optimization knowledge in `ai-agents/backend/docs/KNOWLEDGE.md`
 
 **Result**: Response times consistently under 200ms, even during traffic spikes.
 
-## File Structure for Prompt Templates
+## File Structure for AI Agent Context
 
-We've organized tested prompt templates by use case:
+We've organized tested AI context templates by use case:
 
 ```
-prompts/
-├── debugging/
-│   ├── frontend-issues.md        # React/Vue/Angular specific debugging
-│   ├── backend-issues.md         # API/database debugging
-│   ├── performance-problems.md   # Speed and efficiency issues
-│   └── integration-failures.md   # When systems don't talk properly
-├── feature-development/
-│   ├── user-interface.md         # Building new UI components
-│   ├── api-endpoints.md          # Creating new backend functionality  
-│   ├── admin-tools.md            # Dashboard and management features
-│   └── cross-layer-features.md   # Features spanning multiple workspaces
-├── optimization/
-│   ├── performance-tuning.md     # Making things faster
-│   ├── security-hardening.md     # Making things more secure
-│   ├── code-quality.md           # Refactoring and cleanup
-│   └── monitoring-setup.md       # Adding observability
-└── maintenance/
-    ├── dependency-updates.md     # Upgrading libraries safely
-    ├── database-migrations.md    # Schema changes
-    ├── deployment-automation.md  # CI/CD improvements
-    └── documentation-updates.md  # Keeping docs current
+ai-agents/
+├── templates/
+│   ├── frontend-ai-context.md         # React/Vue/Angular specific context
+│   ├── backend-ai-context.md          # API/database specific context
+│   ├── admin-ai-context.md            # Admin panel specific context
+│   └── AI-PROJECT-OVERVIEW.md         # Project coordination template
+├── prompts/
+│   ├── debugging/                      # Problem-solving prompts
+│   ├── feature-development/            # Building new functionality
+│   ├── optimization/                   # Making things faster/better
+│   └── maintenance/                    # System upkeep prompts
+└── tools/
+    ├── simple-performance-monitor.js   # Track response times
+    ├── api-health-checker.js           # Validate endpoints
+    └── bundle-analyzer.js              # Check frontend bundle size
 ```
 
 Each template includes:
-- **Context setup** - What the AI needs to know
+- **Context setup** - What the AI needs to know about your specific setup
 - **Clear objectives** - What success looks like
 - **Practical constraints** - What can't break
 - **Step-by-step approach** - How to work systematically
@@ -209,92 +242,40 @@ Each template includes:
 ## Contributing Your Results
 
 ### Share What Works
-If your AI workspace helps solve a problem, share it! Use this format:
+If your AI agent context areas help solve a problem, share it! Use this format:
 
 ```markdown
-## Workspace Success: [Brief Description]
+## AI Agent Success: [Brief Description]
 
 **Project Type**: [Tech stack - React/Django/etc.]
 **Problem**: [What wasn't working]
-**AI Approach**: [How the AI helped solve it]  
+**AI Context Used**: [Which ai-agents/ area and how you set it up]
+**AI Agent Approach**: [How the AI helped solve it]  
 **Result**: [What improved, with real numbers if possible]
 **Reusable Pattern**: [What others can learn from this]
 
-### Files Changed
-- [List the actual files that were modified]
+### AI Context Files That Helped
+- [List the specific AI-CONTEXT.md customizations that were key]
 
 ### Knowledge Gained
 - [What went into KNOWLEDGE.md for future reference]
 ```
 
-### Contribution Guidelines
-
-**Naming Convention**:
-- Results: `results/YYYY-MM-DD-[tech-stack]-[issue-type].md`
-- New prompt templates: `prompts/[category]/[specific-use-case].md`
-- Tool improvements: `templates/tools/[workspace]/[tool-name].js`
-
-**What We Want**:
-- Real problems solved with actual outcomes
-- Prompt templates that work for multiple projects
-- Simple monitoring tools that are easy to understand
-- Clear documentation that helps other developers
-
-**Quality Standards**:
-- Must be based on actual usage, not theory
-- Should be reproducible by other developers
-- Needs clear before/after context
-- Include what didn't work as well as what did
-
-## Getting Started Realistically
-
-### Week 1: Pick One Workspace
-- Choose your biggest pain point (frontend, backend, or admin)
-- Copy the relevant template and customize it for your project
-- Try one debugging session using the workspace approach
-- Note what works and what's confusing
-
-### Week 2: Build the Habit
-- Update your KNOWLEDGE.md with discoveries from week 1
-- Try the workspace approach on a different type of problem
-- Add one simple monitoring tool if it would help
-- Refine your AI-README.md based on what you learned
-
-### Week 3: Expand Strategically
-- Set up a second workspace if the first one is proving valuable
-- Share your first success story with the community
-- Try contributing a prompt template improvement
-- Start coordinating between workspaces if needed
-
-### Keep It Simple
-- Don't set up all workspaces at once
-- Don't overcomplicate the monitoring tools
-- Don't try to document everything - focus on what helps
-- Don't expect perfection - this is about gradual improvement
-
-## Why This Isn't Just Another Framework
-
-**It's not about tools** - It's about giving AI assistants the context they need to actually help instead of guess.
-
-**It's not about perfection** - It's about building up knowledge gradually instead of starting from scratch every time.
-
-**It's not about automation** - It's about systematic collaboration between you and AI on real problems.
-
-**It's not about complexity** - It's about organizing information so AI can focus and be more effective.
-
 ## The Bottom Line
 
-Most AI coding assistance fails because the AI lacks context about your specific system. This workspace approach gives your AI assistant:
+Most AI coding assistance fails because the AI lacks context about your specific system. This AI agent context approach gives your AI assistant:
 
-1. **Written context** about your setup and constraints
-2. **Simple tools** to see what's actually happening  
-3. **Persistent memory** that improves over time
+1. **Written context** about your setup and constraints (in `AI-CONTEXT.md` files)
+2. **Simple tools** to see what's actually happening (in `tools/` directories)
+3. **Persistent memory** that improves over time (in `docs/KNOWLEDGE.md` files)
 4. **Focused scope** instead of trying to understand everything at once
+
+**Key Point**: These `ai-agents/` folders are ONLY for AI collaboration. Your actual code stays where it is. The AI context areas just help AI assistants understand your project better.
 
 It's not magic. It's just better organization and communication with your AI assistant.
 
 ---
 
-**Ready to try it?** Start with one workspace for your biggest problem area. See if having focused context makes your AI assistance more useful. Then expand from there.
+**Ready to try it?** Start with one AI agent context area for your biggest problem. See if having focused context makes your AI assistance more useful. Then expand from there.
 
-[Browse workspace templates →](templates/) | [See example prompts →](prompts/) | [Read success stories →](results/)
+[Browse AI context templates →](templates/) | [See example prompts →](prompts/) | [Read success stories →](results/)

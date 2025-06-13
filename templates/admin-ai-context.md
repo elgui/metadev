@@ -1,8 +1,8 @@
-# Admin Workspace Guide (admin-workspace)
+# Admin AI Context (ai-agents/admin/)
 
-## What This Workspace Is For
+**Purpose**: This file gives AI assistants context about your admin panel/dashboard. Save this as `ai-agents/admin/AI-CONTEXT.md` in your project.
 
-This workspace helps AI assistants understand your **admin panel/dashboard** - the interface that administrators and power users use to manage data, users, and system settings.
+**Important**: This is SEPARATE from your actual code. Your normal admin folders stay exactly where they are. This exists solely to help AI assistants understand your admin panel setup.
 
 ## Your Project Setup
 
@@ -23,7 +23,9 @@ This workspace helps AI assistants understand your **admin panel/dashboard** - t
 - **Chart rendering**: Under 2 seconds for typical datasets
 - **Export operations**: Complete within 10 seconds
 
-## Project Structure
+## Your Actual Code Structure
+
+**Note**: This describes your existing admin structure to help AI understand your project. Don't reorganize your actual code.
 
 ```
 admin/
@@ -78,15 +80,15 @@ admin/
 
 ## How to Help Me Effectively
 
-### When Asking for Help
+### When You're Helping with Admin Issues
 1. **Read this file first** so you understand our admin setup
 2. **Be specific about the admin user impact** - which admins, what tasks, how often
-3. **Include what you've already tried** - saves time and shows what doesn't work
+3. **Include what I've already tried** - saves time and shows what doesn't work
 4. **Describe realistic usage conditions** - how much data, how many concurrent admins
 
-### Example of a Good Request
+### Example of a Good Request to You
 ```
-I'm working on the user management page in our admin panel.
+I'm working with the admin panel of our application. I've read the AI context - you know we have a custom admin built with React and Chart.js.
 
 PROBLEM: When admins try to load the user list page, it takes 15+ seconds 
 and sometimes crashes the browser tab. We have about 5,000 users now.
@@ -114,7 +116,7 @@ HELP ME:
 4. Make sure existing admin functionality still works
 ```
 
-## Workspace Files
+## AI Context Files in This Area
 
 ### docs/KNOWLEDGE.md
 Where we document:
@@ -159,7 +161,7 @@ Where we document:
 - Get feedback from real admin users if possible
 
 ### 5. Document the Solution
-- Update `docs/KNOWLEDGE.md` with what you learned
+- Update `docs/KNOWLEDGE.md` with what was learned
 - Include the problem, solution, and performance numbers
 - Note any patterns that could help with future admin features
 
@@ -197,10 +199,10 @@ npm run test:performance
 # 4. Check for errors in console
 ```
 
-## Integration with Other Workspaces
+## Integration with Other AI Context Areas
 
 ### When You Need Backend Changes
-Create a request in the META-AI-README.md:
+Create a request in the AI-PROJECT-OVERVIEW.md:
 ```markdown
 ## Admin Request: [Brief Description]
 **Need**: [What the backend needs to provide for admin functionality]
@@ -286,6 +288,25 @@ useEffect(() => {
 - Plan for multiple concurrent admin users
 - Think about export/import operations on large datasets
 
+## Important Reminders
+
+### This is AI Context Only
+- This file exists to help AI assistants understand your admin panel
+- Your actual code stays in your normal project structure
+- Don't move your admin components, pages, or other code here
+- This `ai-agents/admin/` folder is separate from your development work
+
+### Focus on Real Problems
+- Include your actual admin issues, not hypothetical ones
+- Update this file based on what actually helps with AI assistance
+- Document real solutions that worked in your KNOWLEDGE.md
+
+### Keep It Current
+- Update this file when your admin tech stack changes
+- Add new common problems as they emerge
+- Remove outdated information that no longer applies
+- Keep examples relevant to your current admin setup
+
 ---
 
-**Remember**: This workspace is about making administrative tasks efficient and reliable. Admin users are often power users who value functionality and speed over visual polish. Every change should make admin work faster, easier, or more reliable.
+**Remember**: This AI context area is about making your interactions with AI assistants more effective when working on admin functionality. Focus on providing the context that helps AI understand your specific admin panel setup and constraints.
